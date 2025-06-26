@@ -1,0 +1,342 @@
+/* Additional animations for Rock8.io */
+
+/* Floating animations for various elements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.float-reverse {
+  animation: float 5s ease-in-out infinite reverse;
+}
+
+/* Pulse effect for highlights */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(108, 99, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Gradient background animations */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, var(--primary), var(--secondary), var(--accent));
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Typing cursor effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.typing-effect {
+  overflow: visible;
+  white-space: normal;
+  border-right: 3px solid var(--primary);
+  width: auto;
+  animation: 
+    typing 3.5s steps(40, end) forwards,
+    blink .75s step-end infinite;
+}
+
+/* Reveal animation for sections */
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.reveal.active {
+  animation: reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Reveal delays */
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.reveal-delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* Shimmer effect for buttons and special elements */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.2) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Glitch effect for tech elements */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch:hover::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--secondary);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch 0.5s linear infinite alternate-reverse;
+}
+
+.glitch:hover::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--accent);
+  clip: rect(44px, 450px, 46px, 0);
+  animation: glitch 0.5s linear infinite alternate;
+}
+
+/* Gradient text hover effect */
+.gradient-text-hover {
+  transition: all 0.3s ease;
+}
+
+.gradient-text-hover:hover {
+  background: var(--gradient-blend);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateY(-2px);
+}
+
+/* 3D button effect */
+.btn-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-3d::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--dark-card);
+  transform: translateZ(-10px) translateY(5px);
+  filter: blur(2px);
+  opacity: 0.5;
+  border-radius: var(--border-radius-full);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-5px) translateZ(10px);
+}
+
+.btn-3d:hover::after {
+  transform: translateZ(-20px) translateY(10px);
+  opacity: 0.7;
+}
+
+/* Rotating gear animation for tech icons */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 15s linear infinite;
+}
+
+.rotate-reverse {
+  animation: rotate 15s linear infinite reverse;
+}
+
+/* Spotlight hover effect for cards */
+.spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.spotlight:hover::after {
+  opacity: 1;
+}
+
+/* Custom cursor for interactive elements */
+.custom-cursor {
+  cursor: none;
+  position: relative;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 9998;
+}
+
+/* Hover effect for links */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Color shift on hover */
+.color-shift {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.color-shift::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--primary);
+  transition: height 0.3s ease;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.color-shift:hover::after {
+  height: 100%;
+}

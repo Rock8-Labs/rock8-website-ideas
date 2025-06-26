@@ -1,0 +1,223 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="primaryGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#956fff;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9DA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#19f8f9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6584;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8ca1;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filters -->
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Pattern for circuit board effect -->
+    <pattern id="circuitPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#13111C"/>
+      <path d="M 0,20 L 40,20 M 20,0 L 20,40" stroke="#6C63FF" stroke-width="0.5" opacity="0.1"/>
+      <circle cx="20" cy="20" r="2" fill="#6C63FF" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#circuitPattern)"/>
+  
+  <!-- Central Hub Network -->
+  <g transform="translate(400,300)">
+    <!-- Main hub -->
+    <g>
+      <circle r="40" fill="url(#primaryGrad2)" filter="url(#glow2)" opacity="0.9"/>
+      
+      <!-- Hub core pattern -->
+      <g stroke="white" stroke-width="1.5" fill="none" opacity="0.8">
+        <circle r="25"/>
+        <circle r="15"/>
+        <path d="M -15,-15 L 15,15 M 15,-15 L -15,15"/>
+        <circle cx="0" cy="0" r="5" fill="white"/>
+      </g>
+      
+      <!-- Rotating outer ring -->
+      <circle r="35" fill="none" stroke="url(#primaryGrad2)" stroke-width="2" stroke-dasharray="10,5" opacity="0.6">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Satellite AI Nodes -->
+  <!-- Node 1: Top Left -->
+  <g transform="translate(200,150)">
+    <circle r="25" fill="url(#secondaryGrad2)" filter="url(#glow2)" opacity="0.8"/>
+    <g stroke="white" stroke-width="1" fill="none" opacity="0.7">
+      <rect x="-12" y="-12" width="24" height="24" rx="3"/>
+      <circle cx="0" cy="0" r="8"/>
+      <path d="M -8,0 L 8,0 M 0,-8 L 0,8"/>
+    </g>
+    <circle r="30" fill="none" stroke="url(#secondaryGrad2)" stroke-width="1" opacity="0.3">
+      <animate attributeName="r" values="30;35;30" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Node 2: Top Right -->
+  <g transform="translate(600,150)">
+    <circle r="25" fill="url(#accentGrad2)" filter="url(#glow2)" opacity="0.8"/>
+    <g stroke="white" stroke-width="1" fill="none" opacity="0.7">
+      <polygon points="-15,0 -7.5,-13 7.5,-13 15,0 7.5,13 -7.5,13"/>
+      <circle cx="0" cy="0" r="6"/>
+    </g>
+    <circle r="30" fill="none" stroke="url(#accentGrad2)" stroke-width="1" opacity="0.3">
+      <animate attributeName="r" values="30;35;30" dur="8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Node 3: Bottom Left -->
+  <g transform="translate(200,450)">
+    <circle r="25" fill="url(#primaryGrad2)" filter="url(#glow2)" opacity="0.8"/>
+    <g stroke="white" stroke-width="1" fill="none" opacity="0.7">
+      <path d="M -12,-12 L 12,12 M 12,-12 L -12,12"/>
+      <circle cx="0" cy="0" r="10"/>
+      <circle cx="0" cy="0" r="5" fill="white"/>
+    </g>
+    <circle r="30" fill="none" stroke="url(#primaryGrad2)" stroke-width="1" opacity="0.3">
+      <animate attributeName="r" values="30;35;30" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Node 4: Bottom Right -->
+  <g transform="translate(600,450)">
+    <circle r="25" fill="url(#secondaryGrad2)" filter="url(#glow2)" opacity="0.8"/>
+    <g stroke="white" stroke-width="1" fill="none" opacity="0.7">
+      <rect x="-10" y="-10" width="20" height="20" rx="5"/>
+      <circle cx="-5" cy="-5" r="2" fill="white"/>
+      <circle cx="5" cy="-5" r="2" fill="white"/>
+      <circle cx="0" cy="5" r="2" fill="white"/>
+    </g>
+    <circle r="30" fill="none" stroke="url(#secondaryGrad2)" stroke-width="1" opacity="0.3">
+      <animate attributeName="r" values="30;35;30" dur="9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Connection Lines with Data Flow -->
+  <g>
+    <!-- Hub to Node 1 -->
+    <line x1="400" y1="300" x2="200" y2="150" stroke="url(#primaryGrad2)" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <circle r="3" fill="url(#primaryGrad2)">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <path d="M 400,300 L 200,150"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Hub to Node 2 -->
+    <line x1="400" y1="300" x2="600" y2="150" stroke="url(#secondaryGrad2)" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <circle r="3" fill="url(#secondaryGrad2)">
+      <animateMotion dur="4s" repeatCount="indefinite">
+        <path d="M 400,300 L 600,150"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Hub to Node 3 -->
+    <line x1="400" y1="300" x2="200" y2="450" stroke="url(#accentGrad2)" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <circle r="3" fill="url(#accentGrad2)">
+      <animateMotion dur="5s" repeatCount="indefinite">
+        <path d="M 400,300 L 200,450"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Hub to Node 4 -->
+    <line x1="400" y1="300" x2="600" y2="450" stroke="url(#primaryGrad2)" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="6s" repeatCount="indefinite"/>
+    </line>
+    <circle r="3" fill="url(#primaryGrad2)">
+      <animateMotion dur="6s" repeatCount="indefinite">
+        <path d="M 400,300 L 600,450"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Cross connections -->
+    <line x1="200" y1="150" x2="600" y2="450" stroke="url(#secondaryGrad2)" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="600" y1="150" x2="200" y2="450" stroke="url(#accentGrad2)" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Data Streams -->
+  <g opacity="0.5">
+    <!-- Vertical streams -->
+    <g>
+      <rect x="150" y="0" width="2" height="600" fill="url(#primaryGrad2)" opacity="0.2"/>
+      <rect x="650" y="0" width="2" height="600" fill="url(#secondaryGrad2)" opacity="0.2"/>
+      
+      <!-- Moving data points -->
+      <circle cx="151" cy="0" r="2" fill="url(#primaryGrad2)">
+        <animateMotion dur="8s" repeatCount="indefinite">
+          <path d="M 0,0 L 0,600"/>
+        </animateMotion>
+      </circle>
+      <circle cx="651" cy="600" r="2" fill="url(#secondaryGrad2)">
+        <animateMotion dur="10s" repeatCount="indefinite">
+          <path d="M 0,0 L 0,-600"/>
+        </animateMotion>
+      </circle>
+    </g>
+    
+    <!-- Horizontal streams -->
+    <g>
+      <rect x="0" y="100" width="800" height="2" fill="url(#accentGrad2)" opacity="0.2"/>
+      <rect x="0" y="500" width="800" height="2" fill="url(#primaryGrad2)" opacity="0.2"/>
+      
+      <!-- Moving data points -->
+      <circle cx="0" cy="101" r="2" fill="url(#accentGrad2)">
+        <animateMotion dur="12s" repeatCount="indefinite">
+          <path d="M 0,0 L 800,0"/>
+        </animateMotion>
+      </circle>
+      <circle cx="800" cy="501" r="2" fill="url(#primaryGrad2)">
+        <animateMotion dur="9s" repeatCount="indefinite">
+          <path d="M 0,0 L -800,0"/>
+        </animateMotion>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Ambient Particles -->
+  <g opacity="0.4">
+    <circle cx="100" cy="100" r="1" fill="url(#primaryGrad2)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="1" fill="url(#secondaryGrad2)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="400" r="1" fill="url(#accentGrad2)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="500" r="1" fill="url(#primaryGrad2)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Outer Glow Ring -->
+  <circle cx="400" cy="300" r="280" fill="none" stroke="url(#primaryGrad2)" stroke-width="1" opacity="0.1">
+    <animate attributeName="r" values="280;300;280" dur="15s" repeatCount="indefinite"/>
+  </circle>
+</svg>

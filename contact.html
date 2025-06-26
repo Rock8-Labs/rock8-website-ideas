@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Rock8.io</title>
+  <meta name="description" content="Ready to deploy AI that transforms your business? Let's architect your autonomous future.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/rock8icon.png" type="image/x-icon">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo/logor8_white.png" alt="Rock8.io">
+        </a>
+        
+        <nav class="navbar-menu">
+          <button class="menu-close">
+            <i class="fas fa-times"></i>
+          </button>
+          <a href="index.html" class="navbar-link">Home</a>
+          <a href="services.html" class="navbar-link">Services</a>
+          <a href="approach.html" class="navbar-link">Approach</a>
+          <a href="about.html" class="navbar-link">About</a>
+          <a href="contact.html" class="navbar-link active">Contact</a>
+          <a href="contact.html" class="btn btn-primary navbar-cta">Get in Touch</a>
+        </nav>
+        
+        <button class="navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-overlay"></div>
+  
+  <!-- Page Header -->
+  <section class="hero" style="min-height: 60vh; padding-top: calc(var(--header-height) + var(--space-2xl));">
+    <div class="hero-bg">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+      <div class="text-center">
+        <h1 class="hero-title display reveal">
+          Get In <span class="text-gradient">Touch</span>
+        </h1>
+        <p class="hero-subtitle reveal reveal-delay-1" style="max-width: 600px; margin: 0 auto;">
+          Ready to deploy AI that transforms your business? Let's architect your autonomous future.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="contact-form reveal reveal-delay-1">
+          <form id="contact-form">
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+            </div>
+            
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label for="company" class="form-label">Company</label>
+                <input type="text" class="form-control" id="company" name="company" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone (Optional)</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <select class="form-control" id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="ai-strategy">AI Strategy Consultation</option>
+                <option value="system-development">AI System Development</option>
+                <option value="operations-platform">Autonomous Operations</option>
+                <option value="innovation-labs">Innovation Labs</option>
+                <option value="website-reimagining">Website Re-Imagining</option>
+                <option value="general-inquiry">General Inquiry</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">How can we help?</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-full">Send Message</button>
+          </form>
+        </div>
+        
+        <div class="contact-info reveal reveal-delay-2">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="far fa-envelope"></i>
+            </div>
+            <div>
+              <h3 class="contact-item-title gradient-text-hover">Email Us</h3>
+              <p class="contact-item-text"><a href="mailto:info@rock8.io">info@rock8.io</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div>
+              <h3 class="contact-item-title gradient-text-hover">Global Presence</h3>
+              <p class="contact-item-text">South Africa, US, UK, and India</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div>
+              <h3 class="contact-item-title gradient-text-hover">Connect With Us</h3>
+              <p class="contact-item-text"><a href="https://www.linkedin.com/company/14853263/" target="_blank">LinkedIn</a></p>
+            </div>
+          </div>
+          
+          <div class="card mt-lg">
+            <h3 class="gradient-text-hover">Ready to Go Autonomous?</h3>
+            <p>Let's design intelligent systems that revolutionize your operations. Contact us to begin your journey into autonomous business intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Why Choose Us Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Why Work <span class="text-gradient">With Us?</span></h2>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="fas fa-handshake"></i></div>
+          <h3 class="gradient-text-hover">Partnership Approach</h3>
+          <p>We become an extension of your team, not just another vendor. Your success is our success.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="gradient-text-hover">Proven ROI</h3>
+          <p>Our solutions deliver measurable results. We speak your language: revenue, efficiency, and growth.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-3">
+          <div class="card-icon"><i class="fas fa-clock"></i></div>
+          <h3 class="gradient-text-hover">Rapid Implementation</h3>
+          <p>Start seeing results in weeks, not months. Our experienced team accelerates your transformation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="grid grid-4">
+          <div>
+            <div class="footer-logo">
+              <img src="images/logo/logor8_white.png" alt="Rock8.io">
+            </div>
+            <p class="footer-description">
+              Architecting Autonomous Intelligence. Rock8.io pioneers AI systems that think, evolve, and deliver exponential business value autonomously.
+            </p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/14853263/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Strategy</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Systems</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Autonomous Operations</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Innovation Labs</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Website Re-Imagining</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Real-time Data Streaming</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Industries</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Financial Services</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Healthcare</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Retail</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Manufacturing</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Logistics</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Smart Home/Smart Buildings</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2025 Rock8.io. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

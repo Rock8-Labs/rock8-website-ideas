@@ -1,0 +1,41 @@
+<svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9DA;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FF6584;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="iconGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9DA" />
+      <stop offset="100%" style="stop-color:#06D6A0" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="220" fill="url(#bgGrad2)"/>
+  
+  <!-- Network/Connection Icon -->
+  <g transform="translate(200, 110)">
+    <!-- Central hub -->
+    <circle cx="0" cy="0" r="15" fill="url(#iconGrad2)"/>
+    
+    <!-- Connected nodes -->
+    <circle cx="-40" cy="-20" r="8" fill="url(#iconGrad2)" opacity="0.7"/>
+    <circle cx="40" cy="-20" r="8" fill="url(#iconGrad2)" opacity="0.7"/>
+    <circle cx="-30" cy="30" r="8" fill="url(#iconGrad2)" opacity="0.7"/>
+    <circle cx="30" cy="30" r="8" fill="url(#iconGrad2)" opacity="0.7"/>
+    <circle cx="0" cy="-45" r="8" fill="url(#iconGrad2)" opacity="0.7"/>
+    
+    <!-- Connection lines -->
+    <g stroke="url(#iconGrad2)" stroke-width="2" opacity="0.5" fill="none">
+      <line x1="0" y1="0" x2="-40" y2="-20"/>
+      <line x1="0" y1="0" x2="40" y2="-20"/>
+      <line x1="0" y1="0" x2="-30" y2="30"/>
+      <line x1="0" y1="0" x2="30" y2="30"/>
+      <line x1="0" y1="0" x2="0" y2="-45"/>
+    </g>
+  </g>
+  
+  <!-- Floating elements -->
+  <circle cx="70" cy="50" r="3" fill="#00D9DA" opacity="0.4"/>
+  <circle cx="330" cy="170" r="4" fill="#FF6584" opacity="0.3"/>
+  <circle cx="360" cy="80" r="2" fill="#06D6A0" opacity="0.4"/>
+</svg>

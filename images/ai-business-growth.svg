@@ -1,0 +1,129 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Clean gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9DA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06D6A0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6584;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8CA1;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#00D9DA;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FF6584;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Subtle shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGlow)" opacity="0.3"/>
+  
+  <!-- Main visual: Ascending bars representing business growth -->
+  <g transform="translate(100, 320)">
+    <!-- Business metrics bars -->
+    <rect x="0" y="-60" width="40" height="60" rx="8" fill="url(#primaryGrad)" filter="url(#softShadow)"/>
+    <rect x="60" y="-100" width="40" height="100" rx="8" fill="url(#secondaryGrad)" filter="url(#softShadow)"/>
+    <rect x="120" y="-140" width="40" height="140" rx="8" fill="url(#accentGrad)" filter="url(#softShadow)"/>
+    <rect x="180" y="-180" width="40" height="180" rx="8" fill="url(#primaryGrad)" filter="url(#softShadow)"/>
+    <rect x="240" y="-220" width="40" height="220" rx="8" fill="url(#secondaryGrad)" filter="url(#softShadow)"/>
+    
+    <!-- Growth trend line -->
+    <path d="M20,-30 Q80,-70 140,-110 Q200,-150 260,-190" 
+          stroke="#ffffff" stroke-width="3" fill="none" opacity="0.8"
+          stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;-10" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Data points on trend line -->
+    <circle cx="20" cy="-30" r="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="80" cy="-70" r="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="140" cy="-110" r="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="200" cy="-150" r="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="260" cy="-190" r="4" fill="#ffffff" opacity="0.9"/>
+  </g>
+  
+  <!-- AI Agent representation - clean geometric design -->
+  <g transform="translate(500, 200)">
+    <!-- Central hub -->
+    <circle cx="0" cy="0" r="30" fill="url(#primaryGrad)" filter="url(#softShadow)"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Simple brain/AI icon -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="-8" cy="-5" r="3"/>
+      <circle cx="8" cy="-5" r="3"/>
+      <circle cx="-8" cy="5" r="3"/>
+      <circle cx="8" cy="5" r="3"/>
+      <circle cx="0" cy="0" r="2"/>
+      <!-- Connections -->
+      <line x1="-8" y1="-5" x2="0" y2="0" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+      <line x1="8" y1="-5" x2="0" y2="0" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+      <line x1="-8" y1="5" x2="0" y2="0" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+      <line x1="8" y1="5" x2="0" y2="0" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+    </g>
+    
+    <!-- Orbiting elements representing automation -->
+    <g>
+      <circle cx="50" cy="0" r="8" fill="url(#secondaryGrad)" filter="url(#softShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-50" cy="0" r="8" fill="url(#accentGrad)" filter="url(#softShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 0 0;-360 0 0" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="50" r="6" fill="url(#primaryGrad)" filter="url(#softShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" dur="12s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Business process flow -->
+  <g transform="translate(650, 150)" opacity="0.8">
+    <!-- Process boxes -->
+    <rect x="0" y="0" width="60" height="30" rx="6" fill="url(#secondaryGrad)" filter="url(#softShadow)"/>
+    <rect x="0" y="40" width="60" height="30" rx="6" fill="url(#primaryGrad)" filter="url(#softShadow)"/>
+    <rect x="0" y="80" width="60" height="30" rx="6" fill="url(#accentGrad)" filter="url(#softShadow)"/>
+    
+    <!-- Process flow arrows -->
+    <path d="M30,30 L30,40" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+    <path d="M30,70 L30,80" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+    
+    <!-- Simple icons in boxes -->
+    <g fill="#ffffff" opacity="0.9" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">
+      <text x="30" y="18">DATA</text>
+      <text x="30" y="58">AI</text>
+      <text x="30" y="98">GROWTH</text>
+    </g>
+  </g>
+  
+  <!-- Success metrics -->
+  <g transform="translate(50, 80)" fill="#ffffff" font-family="Arial, sans-serif" opacity="0.9">
+    <text x="0" y="0" font-size="24" font-weight="bold" fill="url(#secondaryGrad)">3x</text>
+    <text x="0" y="20" font-size="12">Revenue Growth</text>
+    
+    <text x="100" y="0" font-size="24" font-weight="bold" fill="url(#primaryGrad)">80%</text>
+    <text x="100" y="20" font-size="12">Cost Reduction</text>
+    
+    <text x="200" y="0" font-size="24" font-weight="bold" fill="url(#accentGrad)">24/7</text>
+    <text x="200" y="20" font-size="12">Autonomous</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" opacity="0.7"/>
+    </marker>
+  </defs>
+</svg>

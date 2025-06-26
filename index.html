@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock8.io - Building Future-Ready Businesses, Faster</title>
+  <meta name="description" content="Rock8.io is your AI-native partner for business-led digital transformation. We accelerate innovation with measurable business impact.">
+  
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+      </svg>
+      <div class="loader-text">ROCK8</div>
+    </div>
+  </div>
+  
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+  
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo/logor8_white.png" alt="Rock8.io">
+        </a>
+        
+        <nav class="navbar-menu">
+          <button class="menu-close">
+            <i class="fas fa-times"></i>
+          </button>
+          <a href="index.html" class="navbar-link active">Home</a>
+          <a href="services.html" class="navbar-link">Services</a>
+          <a href="approach.html" class="navbar-link">Approach</a>
+          <a href="about.html" class="navbar-link">About</a>
+          <a href="contact.html" class="navbar-link">Contact</a>
+          <a href="contact.html" class="btn btn-primary navbar-cta">Get in Touch</a>
+        </nav>
+        
+        <button class="navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-overlay"></div>
+  
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+    
+    <div id="particles-js" class="particles"></div>
+    
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="hero-content">
+          <h1 class="hero-title display reveal">
+            <span class="text-gradient">Unleash</span> Intelligent AI.
+            <br>
+            <span class="typing-effect">Accelerate Everything Else.</span>
+          </h1>
+          
+          <p class="hero-subtitle reveal reveal-delay-1">
+            Rock8.io pioneers AI-powered business transformation.
+            We don't just build systems — we architect intelligent solutions that think, adapt, and deliver results autonomously.
+          </p>
+          
+          <div class="btn-group reveal reveal-delay-2">
+            <a href="approach.html" class="btn btn-primary btn-lg btn-3d">
+              Explore Our Approach
+              <i class="fas fa-arrow-right btn-icon"></i>
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">
+              Get in Touch
+              <i class="fas fa-paper-plane btn-icon"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image reveal reveal-delay-3">
+          <img src="images/Android-conductor-1.jpg" alt="AI Conductor Orchestrating Business Operations">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Business Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">The Challenges <span class="text-gradient">You Face</span></h2>
+        <p class="mx-auto" style="max-width: 600px;">
+          Every business leader knows the pressure to do more with less, compete faster, and scale smarter. 
+          Sound familiar?
+        </p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="gradient-text-hover">Manual Processes Drain Resources</h3>
+          <p>Your team spends 60% of their time on repetitive tasks that could be automated. Meanwhile, strategic initiatives get pushed to "next quarter" again.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="fas fa-database"></i></div>
+          <h3 class="gradient-text-hover">Data Silos Block Decision-Making</h3>
+          <p>Critical business insights are trapped across different systems. You're making decisions with incomplete information while competitors move faster.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-3">
+          <div class="card-icon"><i class="fas fa-users"></i></div>
+          <h3 class="gradient-text-hover">Scaling Challenges Your Operations</h3>
+          <p>Growth means more complexity, more overhead, and more things that can break. Your systems weren't built to scale with your ambitions.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-4">
+          <div class="card-icon"><i class="fas fa-clock"></i></div>
+          <h3 class="gradient-text-hover">Time-to-Market Pressure Intensifies</h3>
+          <p>Customers expect faster delivery, personalization, and 24/7 service. Your current infrastructure can't keep up with market demands.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-5">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="gradient-text-hover">Risk Management Gets Complex</h3>
+          <p>Cyber threats, compliance requirements, and operational risks multiply faster than your ability to monitor and respond to them.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-6">
+          <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3 class="gradient-text-hover">Technology ROI Disappoints</h3>
+          <p>You've invested in digital tools, but they're not delivering the promised returns. Integration is painful and adoption is slow.</p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-xl reveal">
+        <p class="hero-subtitle" style="max-width: 700px; margin: 0 auto;">
+          <strong>You're not alone.</strong> These challenges are exactly why Rock8 exists. 
+          We transform these pain points into competitive advantages through intelligent automation.
+        </p>
+        <div class="btn-group mt-lg">
+          <a href="services.html" class="btn btn-primary">See Our Solutions</a>
+          <a href="contact.html" class="btn btn-outline">Discuss Your Challenges</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="grid grid-4">
+          <div>
+            <div class="footer-logo">
+              <img src="images/logo/logor8_white.png" alt="Rock8.io">
+            </div>
+            <p class="footer-description">
+              Architecting Autonomous Intelligence. Rock8.io pioneers AI systems that think, evolve, and deliver exponential business value autonomously.
+            </p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/14853263/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Strategy</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Systems</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Autonomous Operations</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Innovation Labs</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Website Re-Imagining</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Real-time Data Streaming</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Industries</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Financial Services</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Healthcare</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Retail</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Manufacturing</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Logistics</a></li>
+              <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Smart Home/Smart Buildings</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2025 Rock8.io. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Page Loader CSS -->
+  <style>
+    .page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--dark-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    
+    .page-loader.fade-out {
+      opacity: 0;
+    }
+    
+    .loader {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+    
+    .loader svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .loader #loader-circle {
+      fill: none;
+      stroke: url(#loader-gradient);
+      stroke-width: 4;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: dash 2s linear infinite;
+    }
+    
+    @keyframes dash {
+      0% {
+        stroke-dashoffset: 200;
+      }
+      50% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -200;
+      }
+    }
+    
+    .loader-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 2px;
+    }
+    
+    svg {
+      --loader-gradient-start: var(--primary);
+      --loader-gradient-end: var(--secondary);
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: -60px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-primary);
+      color: var(--text-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      z-index: 99;
+      box-shadow: var(--shadow-glow-primary);
+    }
+    
+    .back-to-top.active {
+      bottom: 30px;
+    }
+    
+    .back-to-top:hover {
+      box-shadow: var(--shadow-glow-primary), var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    /* Custom cursor styles */
+    .cursor-hover {
+      width: 70px;
+      height: 70px;
+      background: transparent;
+      border: 2px solid var(--secondary);
+      mix-blend-mode: difference;
+    }
+  </style>
+  
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="loader-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="var(--loader-gradient-start)" />
+        <stop offset="100%" stop-color="var(--loader-gradient-end)" />
+      </linearGradient>
+    </defs>
+  </svg>
+</body>
+</html>

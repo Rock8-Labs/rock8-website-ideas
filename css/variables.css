@@ -1,0 +1,79 @@
+:root {
+  /* Color Palette - Modern and Vibrant */
+  --primary: #6C63FF;     /* Bold purple - primary brand color */
+  --secondary: #00D9DA;   /* Bright teal - secondary accent */
+  --accent: #FF6584;      /* Vibrant coral - pop of color */
+  --gradient-primary: linear-gradient(135deg, #6C63FF 0%, #956fff 100%);
+  --gradient-secondary: linear-gradient(135deg, #00D9DA 0%, #19f8f9 100%);
+  --gradient-accent: linear-gradient(135deg, #FF6584 0%, #ff8ca1 100%);
+  --gradient-blend: linear-gradient(135deg, #6C63FF 0%, #00D9DA 50%, #FF6584 100%);
+  
+  /* Dark Theme Base Colors */
+  --dark-bg: #13111C;        /* Deep rich background */
+  --dark-card: #1E1A2B;      /* Card/surface background */
+  --dark-card-hover: #251F35; /* Card hover state */
+  --dark-border: #2A243C;    /* Subtle borders */
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;   /* Primary text */
+  --text-secondary: #C8C7D8; /* Secondary/body text */
+  --text-tertiary: #8B89A5;  /* Less important text */
+  
+  /* Semantic Colors */
+  --success: #00E1A0;
+  --warning: #FFBB38;
+  --error: #FF4757;
+  --info: #4593FF;
+  
+  /* Typography */
+  --font-heading: 'ClashDisplay', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Font Sizes */
+  --fs-display: clamp(3rem, 5vw + 1rem, 5rem);
+  --fs-h1: clamp(2.5rem, 4vw + 1rem, 4rem);
+  --fs-h2: clamp(2rem, 3vw + 1rem, 3rem);
+  --fs-h3: clamp(1.5rem, 2vw + 1rem, 2rem);
+  --fs-h4: clamp(1.25rem, 1.5vw + 1rem, 1.5rem);
+  --fs-h5: clamp(1.125rem, 1.25vw + 1rem, 1.25rem);
+  --fs-h6: 1rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.75rem;
+  
+  /* Spacing System */
+  --space-3xs: 0.25rem;   /* 4px */
+  --space-2xs: 0.5rem;    /* 8px */
+  --space-xs: 0.75rem;    /* 12px */
+  --space-sm: 1rem;       /* 16px */
+  --space-md: 1.5rem;     /* 24px */
+  --space-lg: 2rem;       /* 32px */
+  --space-xl: 3rem;       /* 48px */
+  --space-2xl: 4rem;      /* 64px */
+  --space-3xl: 6rem;      /* 96px */
+  
+  /* Misc */
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+  --border-radius-full: 9999px;
+  
+  /* Animation */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow-primary: 0 0 20px rgba(108, 99, 255, 0.5);
+  --shadow-glow-secondary: 0 0 20px rgba(0, 217, 218, 0.5);
+  --shadow-glow-accent: 0 0 20px rgba(255, 101, 132, 0.5);
+  
+  /* Layout */
+  --header-height: 80px;
+  --max-width: 1440px;
+  --max-width-narrow: 1100px;
+}
