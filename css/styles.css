@@ -134,7 +134,7 @@ p {
 }
 
 .section {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-xl) 0;
   position: relative;
 }
 
@@ -1087,12 +1087,12 @@ textarea.form-control {
 .mt-sm { margin-top: var(--space-sm); }
 .mt-md { margin-top: var(--space-md); }
 .mt-lg { margin-top: var(--space-lg); }
-.mt-xl { margin-top: var(--space-xl); }
+.mt-xl { margin-top: var(--space-lg); }
 .mt-2xl { margin-top: var(--space-2xl); }
 
 .mb-sm { margin-bottom: var(--space-sm); }
 .mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
+.mb-lg { margin-bottom: var(--space-md); }
 .mb-xl { margin-bottom: var(--space-xl); }
 .mb-2xl { margin-bottom: var(--space-2xl); }
 
