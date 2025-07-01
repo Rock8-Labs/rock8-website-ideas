@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - Rock8.io</title>
+  <meta name="description" content="Download white papers, industry research, case studies, and guides from Rock8.io. Access expert insights on AI transformation and autonomous systems.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/rock8icon.png" type="image/x-icon">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo/logor8_white.png" alt="Rock8.io">
+        </a>
+        
+        <nav class="navbar-menu">
+          <button class="menu-close">
+            <i class="fas fa-times"></i>
+          </button>
+          <a href="index.html" class="navbar-link">Home</a>
+          <a href="services.html" class="navbar-link">Services</a>
+          <a href="approach.html" class="navbar-link">Approach</a>
+          <a href="about.html" class="navbar-link">About</a>
+          <a href="resources.html" class="navbar-link active">Resources</a>
+          <a href="contact.html" class="navbar-link">Contact</a>
+          <a href="contact.html" class="btn btn-primary navbar-cta">Get in Touch</a>
+        </nav>
+        
+        <button class="navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-overlay"></div>
+  
+  <!-- Page Header -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+      <div class="text-center">
+        <h1 class="hero-title display reveal">
+          Knowledge <span class="text-gradient">Hub</span>
+        </h1>
+        <p class="hero-subtitle reveal reveal-delay-1" style="max-width: 700px; margin: 0 auto;">
+          Access expert insights, industry research, and practical guides on AI transformation and autonomous systems. Download our comprehensive resources to accelerate your digital transformation journey.
+        </p>
+        <div class="hero-badge reveal reveal-delay-2" style="margin-top: var(--space-lg);">
+          <div style="display: inline-flex; align-items: center; background: rgba(108, 99, 255, 0.1); border: 1px solid rgba(108, 99, 255, 0.3); border-radius: var(--border-radius-full); padding: var(--space-xs) var(--space-md); font-size: var(--fs-small); color: var(--text-primary);">
+            <i class="fas fa-download" style="margin-right: var(--space-xs); color: var(--primary);"></i>
+            Free downloads available
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Resources Section -->
+  <section class="section">
+    <div class="container">
+      <!-- Filter Navigation -->
+      <div class="resource-filter reveal" style="margin-bottom: var(--space-2xl);">
+        <div class="text-center">
+          <h2 style="margin-bottom: var(--space-lg);">Browse Our Resources</h2>
+          <div class="filter-tabs" style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-xl);">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-th-large"></i>
+              All Resources
+            </button>
+            <button class="filter-btn" data-filter="whitepapers">
+              <i class="fas fa-file-alt"></i>
+              White Papers
+            </button>
+            <button class="filter-btn" data-filter="research">
+              <i class="fas fa-chart-line"></i>
+              Industry Research
+            </button>
+            <button class="filter-btn" data-filter="case-studies">
+              <i class="fas fa-lightbulb"></i>
+              Case Studies
+            </button>
+            <button class="filter-btn" data-filter="guides">
+              <i class="fas fa-book"></i>
+              Guides & Tutorials
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Resources Grid -->
+      <div class="resources-grid grid grid-3 reveal reveal-delay-1">
+        
+        <!-- White Paper 1 -->
+        <div class="resource-card card" data-category="whitepapers">
+          <div class="resource-thumbnail" data-type="whitepapers">
+            <img src="images/resources/ai-strategy-whitepaper-thumb.jpg" alt="AI Strategy Implementation Guide" loading="lazy">
+            <div class="resource-type-badge">White Paper</div>
+            <div class="resource-overlay">
+              <button class="btn btn-primary btn-download" data-file="ai-strategy-implementation-guide.pdf">
+                <i class="fas fa-download"></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-content">
+            <h3 class="resource-title">AI Strategy Implementation Guide</h3>
+            <p class="resource-description">A comprehensive framework for developing and implementing AI strategies in enterprise environments. Includes practical steps, common pitfalls, and success metrics.</p>
+            <div class="resource-meta">
+              <span class="resource-pages"><i class="fas fa-file"></i> 24 pages</span>
+              <span class="resource-date"><i class="fas fa-calendar"></i> Dec 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Industry Research 1 -->
+        <div class="resource-card card" data-category="research">
+          <div class="resource-thumbnail" data-type="research">
+            <img src="images/resources/ai-adoption-trends-thumb.jpg" alt="AI Adoption Trends 2024" loading="lazy">
+            <div class="resource-type-badge research">Industry Research</div>
+            <div class="resource-overlay">
+              <button class="btn btn-primary btn-download" data-file="ai-adoption-trends-2024.pdf">
+                <i class="fas fa-download"></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-content">
+            <h3 class="resource-title">AI Adoption Trends Report 2024</h3>
+            <p class="resource-description">Latest insights on AI adoption across industries. Survey data from 500+ companies reveals key trends, challenges, and opportunities in AI implementation.</p>
+            <div class="resource-meta">
+              <span class="resource-pages"><i class="fas fa-file"></i> 36 pages</span>
+              <span class="resource-date"><i class="fas fa-calendar"></i> Nov 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Case Study 1 -->
+        <div class="resource-card card" data-category="case-studies">
+          <div class="resource-thumbnail" data-type="case-studies">
+            <img src="images/resources/manufacturing-automation-case-study-thumb.jpg" alt="Manufacturing Automation Case Study" loading="lazy">
+            <div class="resource-type-badge case-study">Case Study</div>
+            <div class="resource-overlay">
+              <button class="btn btn-primary btn-download" data-file="manufacturing-automation-case-study.pdf">
+                <i class="fas fa-download"></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-content">
+            <h3 class="resource-title">Manufacturing Automation Success Story</h3>
+            <p class="resource-description">How a Fortune 500 manufacturer achieved 60% operational efficiency improvement and $2M annual cost savings through AI-powered automation.</p>
+            <div class="resource-meta">
+              <span class="resource-pages"><i class="fas fa-file"></i> 12 pages</span>
+              <span class="resource-date"><i class="fas fa-calendar"></i> Oct 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Guide 1 -->
+        <div class="resource-card card" data-category="guides">
+          <div class="resource-thumbnail" data-type="guides">
+            <img src="images/resources/ai-readiness-assessment-thumb.jpg" alt="AI Readiness Assessment Guide" loading="lazy">
+            <div class="resource-type-badge guide">Guide</div>
+            <div class="resource-overlay">
+              <button class="btn btn-primary btn-download" data-file="ai-readiness-assessment-guide.pdf">
+                <i class="fas fa-download"></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-content">
+            <h3 class="resource-title">AI Readiness Assessment Guide</h3>
+            <p class="resource-description">Step-by-step guide to evaluate your organization's readiness for AI implementation. Includes assessment framework and actionable recommendations.</p>
+            <div class="resource-meta">
+              <span class="resource-pages"><i class="fas fa-file"></i> 18 pages</span>
+              <span class="resource-date"><i class="fas fa-calendar"></i> Sep 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- White Paper 2 -->
+        <div class="resource-card card" data-category="whitepapers">
+          <div class="resource-thumbnail" data-type="whitepapers">
+            <img src="images/resources/autonomous-operations-whitepaper-thumb.jpg" alt="Autonomous Operations Framework" loading="lazy">
+            <div class="resource-type-badge">White Paper</div>
+            <div class="resource-overlay">
+              <button class="btn btn-primary btn-download" data-file="autonomous-operations-framework.pdf">
+                <i class="fas fa-download"></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-content">
+            <h3 class="resource-title">Autonomous Operations Framework</h3>
+            <p class="resource-description">Detailed framework for building autonomous business operations. Covers architecture patterns, implementation strategies, and governance models.</p>
+            <div class="resource-meta">
+              <span class="resource-pages"><i class="fas fa-file"></i> 32 pages</span>
+              <span class="resource-date"><i class="fas fa-calendar"></i> Aug 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Research 2 -->
+        <div class="resource-card card" data-category="research">
+          <div class="resource-thumbnail" data-type="research">
+            <img src="images/resources/roi-analysis-thumb.jpg" alt="AI ROI Analysis" loading="lazy">
+            <div class="resource-type-badge research">Industry Research</div>
+            <div class="resource-overlay">
+              <button class="btn btn-primary btn-download" data-file="ai-roi-analysis-2024.pdf">
+                <i class="fas fa-download"></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+          <div class="resource-content">
+            <h3 class="resource-title">AI ROI Analysis & Benchmarks</h3>
+            <p class="resource-description">Comprehensive analysis of AI investment returns across different industries. Benchmarks, success factors, and ROI calculation methodologies.</p>
+            <div class="resource-meta">
+              <span class="resource-pages"><i class="fas fa-file"></i> 28 pages</span>
+              <span class="resource-date"><i class="fas fa-calendar"></i> Jul 2024</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Coming Soon Section -->
+      <div class="coming-soon-section reveal reveal-delay-2" style="margin-top: var(--space-2xl); text-align: center;">
+        <div style="background: var(--dark-card); border-radius: var(--border-radius-md); padding: var(--space-xl); border: 1px solid var(--dark-border);">
+          <h3 style="margin-bottom: var(--space-md);">More Resources Coming Soon</h3>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">
+            We're continuously adding new white papers, case studies, and industry insights. Subscribe to our newsletter to be notified when new resources become available.
+          </p>
+          <a href="contact.html" class="btn btn-outline">
+            <i class="fas fa-bell"></i>
+            Get Notified
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--dark-card); border-top: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 style="margin-bottom: var(--space-md);">Need Custom Research or Analysis?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+          Looking for specific insights or custom research for your industry? Our team can provide tailored analysis and strategic recommendations.
+        </p>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fas fa-comments"></i>
+            Request Custom Research
+          </a>
+          <a href="services.html" class="btn btn-outline">
+            <i class="fas fa-lightbulb"></i>
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="grid grid-4">
+          <div>
+            <div class="footer-logo">
+              <img src="images/logo/logor8_white.png" alt="Rock8.io">
+            </div>
+            <p class="footer-description">
+              Architecting Autonomous Intelligence. Rock8.io pioneers AI systems that think, evolve, and deliver exponential business value autonomously.
+            </p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/14853263/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Strategy</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Systems</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Autonomous Operations</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> AI Innovation Labs</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Website Re-Imagining</a></li>
+              <li><a href="services.html" class="footer-link"><i class="fas fa-chevron-right"></i> Real-time Data Streaming</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="resources.html" class="footer-link"><i class="fas fa-chevron-right"></i> White Papers</a></li>
+              <li><a href="resources.html" class="footer-link"><i class="fas fa-chevron-right"></i> Industry Research</a></li>
+              <li><a href="resources.html" class="footer-link"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
+              <li><a href="resources.html" class="footer-link"><i class="fas fa-chevron-right"></i> Guides & Tutorials</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2025 Rock8.io. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Enhanced CSS for Resources -->
+  <style>
+    /* Resource Filter Tabs */
+    .filter-tabs {
+      border-bottom: 1px solid var(--dark-border);
+      padding-bottom: var(--space-lg);
+    }
+    
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--dark-border);
+      border-radius: var(--border-radius-full);
+      padding: var(--space-xs) var(--space-md);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2xs);
+      font-size: var(--fs-small);
+      font-weight: 500;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--gradient-primary);
+      border-color: var(--primary);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+    
+    /* Resources Grid */
+    .resources-grid {
+      gap: var(--space-xl);
+    }
+    
+    /* Resource Cards */
+    .resource-card {
+      overflow: hidden;
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .resource-thumbnail {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+      margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-md) calc(-1 * var(--space-lg));
+    }
+    
+    .resource-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-normal);
+    }
+    
+    /* Fallback for missing images */
+    .resource-thumbnail::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-bg) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: var(--text-tertiary);
+      z-index: 1;
+    }
+    
+    .resource-thumbnail[data-type="whitepapers"]::before {
+      content: '\f15c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+    }
+    
+    .resource-thumbnail[data-type="research"]::before {
+      content: '\f201';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+    }
+    
+    .resource-thumbnail[data-type="case-studies"]::before {
+      content: '\f0eb';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+    }
+    
+    .resource-thumbnail[data-type="guides"]::before {
+      content: '\f02d';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+    }
+    
+    .resource-thumbnail img[src] {
+      z-index: 2;
+      position: relative;
+    }
+    
+    .resource-card:hover .resource-thumbnail img {
+      transform: scale(1.05);
+    }
+    
+    .resource-type-badge {
+      position: absolute;
+      top: var(--space-sm);
+      left: var(--space-sm);
+      background: var(--gradient-primary);
+      color: var(--text-primary);
+      padding: var(--space-2xs) var(--space-xs);
+      border-radius: var(--border-radius-sm);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      z-index: 2;
+    }
+    
+    .resource-type-badge.research {
+      background: var(--gradient-secondary);
+    }
+    
+    .resource-type-badge.case-study {
+      background: linear-gradient(135deg, #28a745, #20c997);
+    }
+    
+    .resource-type-badge.guide {
+      background: linear-gradient(135deg, #fd7e14, #ffc107);
+    }
+    
+    .resource-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      z-index: 3;
+    }
+    
+    .resource-card:hover .resource-overlay {
+      opacity: 1;
+    }
+    
+    .btn-download {
+      transform: translateY(10px);
+      transition: all var(--transition-normal);
+    }
+    
+    .resource-card:hover .btn-download {
+      transform: translateY(0);
+    }
+    
+    .resource-content {
+      padding: 0;
+    }
+    
+    .resource-title {
+      margin-bottom: var(--space-sm);
+      font-size: var(--fs-h5);
+      line-height: 1.3;
+    }
+    
+    .resource-description {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-md);
+      font-size: var(--fs-small);
+      line-height: 1.5;
+    }
+    
+    .resource-meta {
+      display: flex;
+      gap: var(--space-md);
+      color: var(--text-tertiary);
+      font-size: var(--fs-small);
+    }
+    
+    .resource-meta span {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs);
+    }
+    
+    .resource-pages,
+    .resource-date {
+      color: var(--text-tertiary);
+    }
+    
+    /* Filtering Animation */
+    .resource-card {
+      transition: all var(--transition-normal), opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .resource-card.hidden {
+      opacity: 0;
+      transform: scale(0.8);
+      pointer-events: none;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .filter-tabs {
+        justify-content: center;
+        gap: var(--space-sm);
+      }
+      
+      .filter-btn {
+        font-size: var(--fs-small);
+        padding: var(--space-2xs) var(--space-sm);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .filter-tabs {
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+      }
+      
+      .resource-thumbnail {
+        height: 180px;
+      }
+    }
+  </style>
+  
+  <!-- Enhanced JavaScript for Resources -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Filter functionality
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const resourceCards = document.querySelectorAll('.resource-card');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active filter button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter resource cards
+          resourceCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+              setTimeout(() => {
+                card.style.display = 'block';
+              }, 50);
+            } else {
+              card.classList.add('hidden');
+              setTimeout(() => {
+                if (card.classList.contains('hidden')) {
+                  card.style.display = 'none';
+                }
+              }, 300);
+            }
+          });
+        });
+      });
+      
+      // Download tracking (placeholder for analytics)
+      const downloadBtns = document.querySelectorAll('.btn-download');
+      downloadBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const fileName = this.getAttribute('data-file');
+          
+          // Track download
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'download', {
+              event_category: 'Resource',
+              event_label: fileName
+            });
+          }
+          
+          // Show download notification
+          this.innerHTML = '<i class="fas fa-check"></i> Downloaded';
+          this.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+          
+          setTimeout(() => {
+            this.innerHTML = '<i class="fas fa-download"></i> Download PDF';
+            this.style.background = '';
+          }, 2000);
+          
+          // In a real implementation, you would trigger the actual download here
+          console.log('Download initiated for:', fileName);
+        });
+      });
+    });
+  </script>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
