@@ -367,7 +367,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--header-height);
+  height: calc(var(--header-height) + var(--space-md));
   z-index: 1000;
   transition: all var(--transition-normal);
   padding: var(--space-md) 0;
@@ -466,8 +466,8 @@ p {
   min-height: 40vh;
   display: flex;
   align-items: center;
-  margin-top: var(--header-height);
-  padding-top: var(--space-md);
+  margin-top: calc(var(--header-height) + var(--space-md));
+  padding-top: calc(var(--header-height) + var(--space-xl));
   padding-bottom: var(--space-md);
   position: relative;
   overflow: hidden;
