@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       
       // Custom cursor interactions
-      const cursorTargets = document.querySelectorAll('a, button, input, textarea, .card, .service-card, .btn, .navbar-link');
+      const cursorTargets = document.querySelectorAll('a, button, input, textarea, select, .btn, .navbar-link, [onclick], [href]');
       
       cursorTargets.forEach(target => {
         target.addEventListener('mouseenter', () => {

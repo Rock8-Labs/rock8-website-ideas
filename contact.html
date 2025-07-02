@@ -55,6 +55,10 @@
   </header>
   <div class="menu-overlay"></div>
   
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+  
   <!-- Page Header -->
   <section class="hero">
     <div class="hero-bg">
@@ -878,6 +882,52 @@
       }
     });
   </script>
+  
+  <!-- Custom Cursor CSS -->
+  <style>
+    /* Custom cursor styles */
+    .cursor-dot,
+    .cursor-circle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: difference;
+      will-change: transform;
+      transform: translate(-50%, -50%);
+    }
+    
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    
+    .cursor-circle {
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .cursor-circle.cursor-hover {
+      width: 70px;
+      height: 70px;
+      background: transparent;
+      border: 2px solid var(--secondary);
+    }
+    
+    @media (max-width: 768px) {
+      .cursor-dot,
+      .cursor-circle {
+        display: none;
+      }
+    }
+  </style>
   
   <!-- JavaScript -->
   <script src="js/main.js"></script>
