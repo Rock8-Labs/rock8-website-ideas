@@ -478,6 +478,31 @@
     .filter-btn.magenta-btn:hover { opacity: 0.8; }
     .filter-btn.purple-btn:hover { opacity: 0.8; }
     .filter-btn.lime-btn:hover { opacity: 0.8; }
+    
+    /* Ensure active colored buttons don't get overridden by general active styles */
+    .filter-btn.cyan-btn.active {
+      background: var(--color-cyan) !important;
+      border-color: var(--color-cyan) !important;
+      color: var(--dark-bg) !important;
+    }
+    
+    .filter-btn.magenta-btn.active {
+      background: var(--color-magenta) !important;
+      border-color: var(--color-magenta) !important;
+      color: var(--dark-bg) !important;
+    }
+    
+    .filter-btn.purple-btn.active {
+      background: var(--color-purple) !important;
+      border-color: var(--color-purple) !important;
+      color: white !important;
+    }
+    
+    .filter-btn.lime-btn.active {
+      background: var(--color-lime) !important;
+      border-color: var(--color-lime) !important;
+      color: var(--dark-bg) !important;
+    }
 
     /* Resource Filter Tabs */
     .filter-tabs {
@@ -502,10 +527,31 @@
     
     .filter-btn:hover,
     .filter-btn.active {
+      transform: translateY(-1px);
+    }
+    
+    /* All Resources button styling */
+    .filter-btn:not(.cyan-btn):not(.magenta-btn):not(.purple-btn):not(.lime-btn) {
       background: var(--gradient-primary);
       border-color: var(--primary);
       color: var(--text-primary);
-      transform: translateY(-1px);
+    }
+    
+    .filter-btn:not(.cyan-btn):not(.magenta-btn):not(.purple-btn):not(.lime-btn):hover,
+    .filter-btn:not(.cyan-btn):not(.magenta-btn):not(.purple-btn):not(.lime-btn).active {
+      background: var(--gradient-primary);
+      border-color: var(--primary);
+      color: var(--text-primary);
+    }
+    
+    /* Dimming effect for inactive buttons when any filter is active */
+    .filter-btn:not(.active) {
+      opacity: 0.6;
+    }
+    
+    /* Active buttons stay at full opacity */
+    .filter-btn.active {
+      opacity: 1;
     }
     
     /* Resources Grid */
