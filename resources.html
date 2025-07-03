@@ -75,6 +75,28 @@
   <!-- Resources Section -->
   <section class="section">
     <div class="container">
+      <!-- Content Type Labels -->
+      <div class="content-type-labels" style="margin-bottom: var(--space-lg);">
+        <div style="display: flex; justify-content: center; gap: var(--space-lg); flex-wrap: wrap;">
+          <div class="type-label cyan">
+            <i class="fas fa-file-alt"></i>
+            White Papers
+          </div>
+          <div class="type-label magenta">
+            <i class="fas fa-chart-line"></i>
+            Industry Research
+          </div>
+          <div class="type-label purple">
+            <i class="fas fa-lightbulb"></i>
+            Case Studies
+          </div>
+          <div class="type-label lime">
+            <i class="fas fa-book"></i>
+            Guides & Tutorials
+          </div>
+        </div>
+      </div>
+
       <!-- Filter Navigation -->
       <div class="resource-filter reveal" style="margin-bottom: var(--space-2xl);">
         <div class="text-center">
@@ -84,19 +106,19 @@
               <i class="fas fa-th-large"></i>
               All Resources
             </button>
-            <button class="filter-btn" data-filter="whitepapers">
+            <button class="filter-btn cyan-btn" data-filter="whitepapers">
               <i class="fas fa-file-alt"></i>
               White Papers
             </button>
-            <button class="filter-btn" data-filter="research">
+            <button class="filter-btn magenta-btn" data-filter="research">
               <i class="fas fa-chart-line"></i>
               Industry Research
             </button>
-            <button class="filter-btn" data-filter="case-studies">
+            <button class="filter-btn purple-btn" data-filter="case-studies">
               <i class="fas fa-lightbulb"></i>
               Case Studies
             </button>
-            <button class="filter-btn" data-filter="guides">
+            <button class="filter-btn lime-btn" data-filter="guides">
               <i class="fas fa-book"></i>
               Guides & Tutorials
             </button>
@@ -423,6 +445,81 @@
   
   <!-- Enhanced CSS for Resources -->
   <style>
+    /* Color Variables */
+    :root {
+      --color-cyan: #00ffff;
+      --color-magenta: #ff00ff;
+      --color-purple: #8a2be2;
+      --color-lime: #32cd32;
+    }
+    
+    /* Content Type Labels */
+    .content-type-labels {
+      text-align: center;
+    }
+    
+    .type-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--border-radius-full);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      color: var(--dark-bg);
+    }
+    
+    .type-label.cyan { background: var(--color-cyan); }
+    .type-label.magenta { background: var(--color-magenta); }
+    .type-label.purple { background: var(--color-purple); color: white; }
+    .type-label.lime { background: var(--color-lime); }
+    
+    /* Colored Card Borders */
+    .resource-card[data-category="whitepapers"] {
+      border: 2px solid var(--color-cyan);
+    }
+    
+    .resource-card[data-category="research"] {
+      border: 2px solid var(--color-magenta);
+    }
+    
+    .resource-card[data-category="case-studies"] {
+      border: 2px solid var(--color-purple);
+    }
+    
+    .resource-card[data-category="guides"] {
+      border: 2px solid var(--color-lime);
+    }
+    
+    /* Filter Button Colors */
+    .filter-btn.cyan-btn:hover,
+    .filter-btn.cyan-btn.active {
+      background: var(--color-cyan);
+      border-color: var(--color-cyan);
+      color: var(--dark-bg);
+    }
+    
+    .filter-btn.magenta-btn:hover,
+    .filter-btn.magenta-btn.active {
+      background: var(--color-magenta);
+      border-color: var(--color-magenta);
+      color: var(--dark-bg);
+    }
+    
+    .filter-btn.purple-btn:hover,
+    .filter-btn.purple-btn.active {
+      background: var(--color-purple);
+      border-color: var(--color-purple);
+      color: white;
+    }
+    
+    .filter-btn.lime-btn:hover,
+    .filter-btn.lime-btn.active {
+      background: var(--color-lime);
+      border-color: var(--color-lime);
+      color: var(--dark-bg);
+    }
+
     /* Resource Filter Tabs */
     .filter-tabs {
       border-bottom: 1px solid var(--dark-border);
