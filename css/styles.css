@@ -357,6 +357,18 @@ p {
   margin-bottom: var(--space-md);
 }
 
+.card-icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.service-card .card-icon img {
+  width: 32px;
+  height: 32px;
+  filter: none;
+}
+
 .card-hover-glow:hover {
   box-shadow: var(--shadow-glow-primary);
 }
