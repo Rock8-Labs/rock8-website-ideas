@@ -14,12 +14,6 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
   
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS with your public key
-    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with actual EmailJS public key
-  </script>
   
   <!-- Preload fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
@@ -98,7 +92,7 @@
             <p class="progress-text" style="font-size: var(--fs-small); color: var(--text-tertiary); margin-top: var(--space-xs);">Complete your details</p>
           </div>
           
-          <form id="contact-form" method="POST" novalidate>
+          <form id="contact-form" method="POST" action="contact_handler.php" novalidate>
             <!-- Name and Email Row -->
             <div class="form-row">
               <div class="form-group">
@@ -796,50 +790,45 @@
           <p>${formData.get('message')}</p>
         `;
         
-        // Send email using EmailJS
-        emailjs.send('service_rock8', 'template_contact', {
-          to_email: 'sales@rock8.io',
-          subject: `New Contact Us form submission from ${companyName}`,
-          company_name: formData.get('company'),
-          from_name: formData.get('name'),
-          from_email: formData.get('email'),
-          role: formData.get('role'),
-          company_size: formData.get('company-size'),
-          budget: formData.get('budget'),
-          phone: formData.get('phone'),
-          timezone: finalTimezone,
-          inquiry_subject: formData.get('subject'),
-          timeline: formData.get('timeline'),
-          message: formData.get('message'),
-          html_body: emailBody
-        }).then(function(response) {
-          // Success - show banner and reset form
-          form.reset();
-          updateProgress();
-          
-          // Reset button
-          btnText.style.display = 'inline';
-          btnLoading.style.display = 'none';
-          submitBtn.disabled = true;
-          
-          // Show success banner
-          const successBanner = document.getElementById('success-banner');
-          successBanner.style.display = 'block';
-          
-          // Hide success banner after 10 seconds
-          setTimeout(function() {
-            successBanner.style.display = 'none';
-          }, 10000);
-          
-          // Track form submission
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'form_submit', {
-              event_category: 'Contact',
-              event_label: 'Strategy Session Request'
-            });
+        // Send form data to PHP handler
+        fetch('contact_handler.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            // Success - show banner and reset form
+            form.reset();
+            updateProgress();
+            
+            // Reset button
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = true;
+            
+            // Show success banner
+            const successBanner = document.getElementById('success-banner');
+            successBanner.style.display = 'block';
+            
+            // Hide success banner after 10 seconds
+            setTimeout(function() {
+              successBanner.style.display = 'none';
+            }, 10000);
+            
+            // Track form submission
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'form_submit', {
+                event_category: 'Contact',
+                event_label: 'Strategy Session Request'
+              });
+            }
+          } else {
+            throw new Error(data.error || 'Unknown error occurred');
           }
-        }).catch(function(error) {
-          console.error('EmailJS Error:', error);
+        })
+        .catch(error => {
+          console.error('Form submission error:', error);
           
           // Reset button on error
           btnText.style.display = 'inline';
@@ -847,7 +836,7 @@
           submitBtn.disabled = false;
           
           // Show error message
-          alert('Sorry, there was an error sending your message. Please try again or contact us directly at sales@rock8.io');
+          alert(error.message || 'Sorry, there was an error sending your message. Please try again or contact us directly at sales@rock8.io');
         });
       });
       
