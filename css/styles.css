@@ -657,7 +657,10 @@ p {
   right: -2px;
   bottom: -2px;
   border-radius: calc(var(--border-radius-lg) + 2px);
-  background: none;
+  background: linear-gradient(135deg, 
+    var(--primary) 0%, 
+    var(--secondary) 50%, 
+    var(--accent) 100%);
   z-index: -1;
   opacity: 0.6;
   filter: blur(1px);
@@ -669,8 +672,7 @@ p {
   background-color: var(--dark-bg) !important;
 }
 
-.solution-hero .hero-image::before,
-.solution-hero .hero-image::after {
+.solution-hero .hero-image::before {
   background: none !important;
 }
 
