@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} - Rock8.io</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="keywords" content="{{KEYWORDS}}">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/rock8icon.png" type="image/x-icon">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" as="style">
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="hero solution-hero">
+    <div class="hero-bg">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="hero-content">
+          <h1 class="hero-title display reveal">
+            {{HERO_TITLE}}
+          </h1>
+          <p class="hero-subtitle reveal reveal-delay-1">
+            {{HERO_SUBTITLE}}
+          </p>
+        </div>
+        <div class="hero-image reveal reveal-delay-2">
+          <img src="../images/{{HERO_IMAGE}}" alt="{{HERO_IMAGE_ALT}}">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Real-World <span class="text-gradient">Transformation</span></h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 700px;">
+          {{CASE_STUDY_INTRO}}
+        </p>
+      </div>
+      
+      <div class="grid grid-2" style="gap: var(--space-lg);">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="{{PROBLEM_ICON}}"></i></div>
+          <h3 class="gradient-text-hover">{{PROBLEM_TITLE}}</h3>
+          <p>{{PROBLEM_DESCRIPTION}}</p>
+          
+          <h4>The Breakdown:</h4>
+          <ul>
+            {{PROBLEM_BULLETS}}
+          </ul>
+        </div>
+
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="{{SOLUTION_ICON}}"></i></div>
+          <h3 class="gradient-text-hover">{{SOLUTION_TITLE}}</h3>
+          <p>{{SOLUTION_DESCRIPTION}}</p>
+          
+          <h4>Our Solution Architecture:</h4>
+          <ul>
+            {{SOLUTION_BULLETS}}
+          </ul>
+          <p><strong>{{SOLUTION_FOOTER}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Impact Section -->
+  <section class="section" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Proven <span class="text-gradient">Business Impact</span></h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+          {{IMPACT_INTRO}}
+        </p>
+      </div>
+      
+      <div class="grid grid-4" style="gap: var(--space-lg); margin-top: var(--space-xl);">
+        <div class="metric-card reveal reveal-delay-1" data-metric="metric1">
+          <i class="metric-icon {{METRIC1_ICON}}"></i>
+          <span class="metric-value" data-target="{{METRIC1_VALUE}}" data-suffix="{{METRIC1_SUFFIX}}">{{METRIC1_DISPLAY}}</span>
+          <span class="metric-label">{{METRIC1_LABEL}}</span>
+          <div class="metric-tooltip">{{METRIC1_TOOLTIP}}</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-2" data-metric="metric2">
+          <i class="metric-icon {{METRIC2_ICON}}"></i>
+          <span class="metric-value" data-target="{{METRIC2_VALUE}}" data-prefix="{{METRIC2_PREFIX}}" data-suffix="{{METRIC2_SUFFIX}}">{{METRIC2_DISPLAY}}</span>
+          <span class="metric-label">{{METRIC2_LABEL}}</span>
+          <div class="metric-tooltip">{{METRIC2_TOOLTIP}}</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-3" data-metric="metric3">
+          <i class="metric-icon {{METRIC3_ICON}}"></i>
+          <span class="metric-value" data-target="{{METRIC3_VALUE}}" data-suffix="{{METRIC3_SUFFIX}}">{{METRIC3_DISPLAY}}</span>
+          <span class="metric-label">{{METRIC3_LABEL}}</span>
+          <div class="metric-tooltip">{{METRIC3_TOOLTIP}}</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-4" data-metric="metric4">
+          <i class="metric-icon {{METRIC4_ICON}}"></i>
+          <span class="metric-value" data-target="{{METRIC4_VALUE}}" data-suffix="{{METRIC4_SUFFIX}}">{{METRIC4_DISPLAY}}</span>
+          <span class="metric-label">{{METRIC4_LABEL}}</span>
+          <div class="metric-tooltip">{{METRIC4_TOOLTIP}}</div>
+        </div>
+      </div>
+      
+      <p class="text-center reveal" style="margin-top: var(--space-xl); color: var(--primary); font-weight: var(--fw-semibold); font-size: var(--fs-h5);">
+        {{IMPACT_FOOTER}}
+      </p>
+    </div>
+  </section>
+
+  <!-- Case Study Continued -->
+  <section class="section">
+    <div class="container">
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">How We <span class="text-gradient">Transform</span> {{TRANSFORM_SUBJECT}}</h2>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="{{APPROACH1_ICON}}"></i></div>
+          <h3 class="gradient-text-hover">{{APPROACH1_TITLE}}</h3>
+          <p>{{APPROACH1_DESCRIPTION}}</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="{{APPROACH2_ICON}}"></i></div>
+          <h3 class="gradient-text-hover">{{APPROACH2_TITLE}}</h3>
+          <p>{{APPROACH2_DESCRIPTION}}</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-3">
+          <div class="card-icon"><i class="{{APPROACH3_ICON}}"></i></div>
+          <h3 class="gradient-text-hover">{{APPROACH3_TITLE}}</h3>
+          <p>{{APPROACH3_DESCRIPTION}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--dark-card); border-top: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="mb-lg">{{CTA_TITLE}}</h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+          {{CTA_SUBTITLE}}
+        </p>
+        <div class="btn-group mt-lg">
+          <a href="../contact.html" class="btn btn-primary btn-lg">{{CTA_BUTTON1}}</a>
+          <a href="../services.html" class="btn btn-outline btn-lg">{{CTA_BUTTON2}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <!-- JavaScript -->
+  <script src="../js/services-data.js"></script>
+  <script src="../js/main.js"></script>
+
+  <script>
+    // Count-up Animation for Business Impact Metrics
+    document.addEventListener('DOMContentLoaded', function() {
+      // Count-up Animation for Metrics
+      function animateMetrics() {
+        const metricValues = document.querySelectorAll('.metric-value[data-target]');
+        
+        metricValues.forEach(value => {
+          const target = parseFloat(value.dataset.target);
+          const prefix = value.dataset.prefix || '';
+          const suffix = value.dataset.suffix || '';
+          const duration = 2000; // 2 seconds
+          const stepTime = 50; // Update every 50ms
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            
+            // Format the number based on the metric type
+            let displayValue;
+            if (suffix === '%' && target < 100) {
+              // Percentage with decimals
+              displayValue = `${current.toFixed(2)}${suffix}`;
+            } else if (target >= 1000 && suffix === 'K') {
+              // Money value in thousands
+              displayValue = `${prefix}${Math.round(current / 1000)}${suffix}`;
+            } else if (suffix === '%') {
+              // Regular percentage
+              displayValue = `${Math.round(current)}${suffix}`;
+            } else {
+              // Regular number
+              displayValue = Math.round(current);
+            }
+            
+            value.textContent = displayValue;
+          }, stepTime);
+        });
+      }
+      
+      // Intersection Observer for scroll-triggered animations
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px'
+      };
+      
+      const metricObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateMetrics();
+            metricObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe the Business Impact section
+      const businessImpactSection = document.querySelector('[data-metric="metric1"]')?.closest('.section');
+      if (businessImpactSection) {
+        metricObserver.observe(businessImpactSection);
+      }
+    });
+  </script>
+  
+  <!-- Load Header and Footer -->
+  <script>
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("../includes/header.html");
+        const footerResponse = await fetch("../includes/footer.html");
+        
+        if (headerResponse.ok) {
+          document.getElementById("header").innerHTML = await headerResponse.text();
+        }
+        
+        if (footerResponse.ok) {
+          document.getElementById("footer").innerHTML = await footerResponse.text();
+        }
+        
+        // Fix navigation links for subdirectory page
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('#')) {
+            link.setAttribute('href', '../' + href);
+          }
+        });
+        
+        // Fix image paths in header and footer for subdirectory page
+        const images = document.querySelectorAll('#header img, #footer img');
+        images.forEach(img => {
+          const src = img.getAttribute('src');
+          if (src && !src.startsWith('http') && !src.startsWith('/')) {
+            img.setAttribute('src', '../' + src);
+          }
+        });
+        
+        // Set active nav link for current page
+        const currentPage = location.pathname.split('/').pop() || 'index.html';
+        const activeNavLinks = document.querySelectorAll('.navbar-link');
+        activeNavLinks.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      } catch (error) {
+        console.error('Error loading includes:', error);
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', loadIncludes);
+  </script>
+</body>
+</html>

@@ -905,6 +905,8 @@ small, .text-small, .footer-description {
   border-color: var(--electric-orange);
   background: var(--dark-card);
   transform: translateY(-2px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(255, 140, 0, 0.15);
 }
 
 .metric-icon {
