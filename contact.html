@@ -97,12 +97,12 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="name" class="form-label">Your Name *</label>
-                <input type="text" class="form-control" id="name" name="name" required aria-describedby="name-error">
+                <input type="text" class="form-control" id="name" name="name" required aria-describedby="name-error" data-lpignore="true" data-form-type="other">
                 <div class="error-message" id="name-error" role="alert"></div>
               </div>
               <div class="form-group">
                 <label for="email" class="form-label">Business Email *</label>
-                <input type="email" class="form-control" id="email" name="email" required aria-describedby="email-error">
+                <input type="email" class="form-control" id="email" name="email" required aria-describedby="email-error" data-lpignore="true" data-form-type="other">
                 <div class="error-message" id="email-error" role="alert"></div>
               </div>
             </div>
@@ -111,7 +111,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="company" class="form-label">Company Name *</label>
-                <input type="text" class="form-control" id="company" name="company" required aria-describedby="company-error">
+                <input type="text" class="form-control" id="company" name="company" required aria-describedby="company-error" data-lpignore="true" data-form-type="other">
                 <div class="error-message" id="company-error" role="alert"></div>
               </div>
               <div class="form-group">
@@ -469,6 +469,28 @@
   
   <!-- Enhanced CSS for New Features -->
   <style>
+    /* Hide password manager icons */
+    input::-ms-reveal,
+    input::-ms-clear {
+      display: none !important;
+    }
+    
+    /* Hide LastPass and other password manager icons */
+    input[data-lpignore="true"],
+    input[data-form-type],
+    input[data-bwignore] {
+      background-image: none !important;
+    }
+    
+    /* Generic password manager icon hiding */
+    .form-control {
+      position: relative;
+    }
+    
+    .form-control::-webkit-credentials-auto-fill-button {
+      display: none !important;
+    }
+
     /* Form Row Styles */
     .form-row {
       display: grid;
