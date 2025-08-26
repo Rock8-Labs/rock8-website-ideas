@@ -279,6 +279,15 @@
           document.getElementById("footer").innerHTML = await footerResponse.text();
         }
         
+        // Fix navigation links for subdirectory page
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('#')) {
+            link.setAttribute('href', '../' + href);
+          }
+        });
+        
         // Set active nav link for current page
         const currentPage = location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.navbar-link');

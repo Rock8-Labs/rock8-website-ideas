@@ -163,6 +163,17 @@
           document.getElementById("footer").innerHTML = await footerResponse.text();
         }
         
+        // Fix navigation links based on current page location
+        const isSubdirectory = window.location.pathname.includes('/services/');
+        const baseUrl = isSubdirectory ? '../' : './';
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('#')) {
+            link.setAttribute('href', baseUrl + href);
+          }
+        });
+        
         // Set active nav link for current page
         const currentPage = location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.navbar-link');
