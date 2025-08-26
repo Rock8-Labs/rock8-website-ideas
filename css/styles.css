@@ -369,6 +369,15 @@ p {
   filter: none;
 }
 
+/* Service loading state */
+.service-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 .card-hover-glow:hover {
   box-shadow: var(--shadow-glow-primary);
 }
