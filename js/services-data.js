@@ -111,19 +111,40 @@ function renderServiceCards(containerId, context = 'services', services = SERVIC
 /**
  * Initialize service cards on page load
  */
-document.addEventListener('DOMContentLoaded', function() {
+function initializeServices() {
+  console.log('Initializing services...');
+  
   // Check if we're on the home page (has home-services-container)
   const homeContainer = document.getElementById('home-services-container');
   if (homeContainer) {
+    console.log('Found home container, rendering services');
     renderServiceCards('home-services-container', 'home');
   }
 
   // Check if we're on the services page (has services-container)
   const servicesContainer = document.getElementById('services-container');
   if (servicesContainer) {
+    console.log('Found services container, rendering services');
     renderServiceCards('services-container', 'services');
   }
-});
+}
+
+// Try multiple ways to ensure initialization
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeServices);
+} else {
+  // DOM is already ready
+  initializeServices();
+}
+
+// Fallback - try again after a short delay
+setTimeout(function() {
+  if (document.getElementById('home-services-container') && 
+      document.getElementById('home-services-container').innerHTML.includes('Loading services')) {
+    console.log('Fallback initialization triggered');
+    initializeServices();
+  }
+}, 100);
 
 // Export for potential module usage
 if (typeof module !== 'undefined' && module.exports) {
