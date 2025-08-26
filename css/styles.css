@@ -937,9 +937,9 @@ small, .text-small, .footer-description {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--dark-bg);
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.9) 0%, rgba(255, 140, 0, 0.9) 100%);
   border: 1px solid var(--electric-orange);
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   padding: var(--space-sm) var(--space-md);
   font-size: var(--fs-small);
   color: var(--text-primary);
@@ -949,6 +949,8 @@ small, .text-small, .footer-description {
   transition: all 0.3s ease;
   z-index: 10;
   pointer-events: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .metric-tooltip::after {
@@ -957,8 +959,8 @@ small, .text-small, .footer-description {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: var(--electric-orange);
+  border: 6px solid transparent;
+  border-top-color: rgba(255, 140, 0, 0.9);
 }
 
 .metric-card:hover .metric-tooltip {
