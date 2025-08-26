@@ -676,6 +676,64 @@ p {
   background: none !important;
 }
 
+/* Solution Hero Image Effects */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 101, 132, 0.6))
+           drop-shadow(0 0 16px rgba(255, 101, 132, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 101, 132, 0.8))
+           drop-shadow(0 0 24px rgba(255, 101, 132, 0.4));
+  }
+}
+
+.solution-hero .hero-image img {
+  /* Soft neon glow effect */
+  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.4))
+          drop-shadow(0 0 20px rgba(0, 217, 218, 0.3))
+          drop-shadow(0 0 30px rgba(255, 101, 132, 0.2));
+  
+  /* Subtle floating animation */
+  animation: softFloat 7s ease-in-out infinite;
+  
+  /* Ensure no layout shift */
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.solution-hero .hero-image:hover img {
+  /* Enhanced glow on hover */
+  filter: drop-shadow(0 0 15px rgba(108, 99, 255, 0.6))
+          drop-shadow(0 0 25px rgba(0, 217, 218, 0.4))
+          drop-shadow(0 0 35px rgba(255, 101, 132, 0.3));
+  
+  /* Slightly faster float on hover */
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .solution-hero .hero-image img {
+    animation: none;
+    transform: none;
+  }
+  
+  .solution-hero .hero-image:hover img {
+    animation: none;
+  }
+}
+
 /* Features Section */
 .feature-card {
   text-align: left;

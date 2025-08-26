@@ -3,6 +3,7 @@
   --primary: #6C63FF;     /* Bold purple - primary brand color */
   --secondary: #00D9DA;   /* Bright teal - secondary accent */
   --accent: #FF6584;      /* Vibrant coral - pop of color */
+  --electric-orange: #ff6a00; /* Electric orange for metrics */
   --gradient-primary: linear-gradient(135deg, #6C63FF 0%, #956fff 100%);
   --gradient-secondary: linear-gradient(135deg, #00D9DA 0%, #19f8f9 100%);
   --gradient-accent: linear-gradient(135deg, #FF6584 0%, #ff8ca1 100%);
@@ -28,7 +29,15 @@
   /* Typography */
   --font-heading: 'ClashDisplay', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  
+  /* Font Weights */
+  --fw-light: 300;     /* Annotations, captions */
+  --fw-regular: 400;   /* Body text */
+  --fw-medium: 500;    /* Emphasis */
+  --fw-semibold: 600;  /* Subheadings */
+  --fw-bold: 700;      /* Headers */
+  --fw-extrabold: 800; /* Display text */
   
   /* Font Sizes */
   --fs-display: clamp(3rem, 5vw + 1rem, 5rem);

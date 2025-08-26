@@ -18,6 +18,7 @@
   <!-- Preload fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
   <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" as="style">
 </head>
 <body>
   <!-- Header / Navbar -->
@@ -65,7 +66,7 @@
           </h1>
           <p class="hero-subtitle reveal reveal-delay-1">
             From brittle to bulletproof—without rewriting the world.
-            We transform your legacy systems into autonomous, self-healing platforms that detect, recover, and prevent failures.
+            We transform your legacy systems into autonomous, <span class="tech-term">self-healing platforms</span> that detect, recover, and prevent failures.
           </p>
         </div>
         <div class="hero-image reveal reveal-delay-2">
@@ -81,35 +82,92 @@
       <div class="section-header text-center reveal">
         <h2 class="mb-lg">Real-World <span class="text-gradient">Transformation</span></h2>
         <p class="hero-subtitle mx-auto" style="max-width: 700px;">
-          How we transformed a decade-old warehouse management system from a daily firefighting nightmare into a strategic business asset.
+          Logistics firm transformation case study: from daily firefighting to strategic advantage.
         </p>
       </div>
       
-      <div class="grid grid-2">
+      <div class="grid grid-2" style="gap: var(--space-lg);">
         <div class="card card-hover-glow reveal reveal-delay-1">
           <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
-          <h3 class="gradient-text-hover">The Challenge</h3>
-          <p>A regional logistics firm was trapped by their legacy warehouse management system:</p>
+          <h3 class="gradient-text-hover">Legacy System Crisis</h3>
+          <p>Regional logistics firm trapped by decade-old warehouse system with daily failures and $40K/month losses.</p>
+          
+          <h4>The Breakdown:</h4>
           <ul>
-            <li>Daily sync failures between inventory and dispatch</li>
-            <li>Manual overrides required for basic routing logic</li>
-            <li>No rollback safety, alerting, or audit trail</li>
-            <li><strong>$40K/month</strong> in lost shipments and labor costs</li>
+            <li>• Daily <span class="tech-term">sync failures</span> between inventory and dispatch</li>
+            <li>• Manual overrides required for basic <span class="tech-term">routing logic</span></li>
+            <li>• No <span class="tech-term">rollback safety</span>, alerting, or <span class="tech-term">audit trail</span></li>
+            <li>• Customer churn due to missed SLAs</li>
+            <li>• Ops team burnout from constant firefighting</li>
+            <li>• Zero visibility into root causes or failure patterns</li>
           </ul>
         </div>
-        
+
         <div class="card card-hover-glow reveal reveal-delay-2">
-          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-          <h3 class="gradient-text-hover">The Results</h3>
-          <p>We wrapped the legacy system in intelligent, self-healing automation:</p>
+          <div class="card-icon"><i class="fas fa-tools"></i></div>
+          <h3 class="gradient-text-hover">Surgical Integration</h3>
+          <p>Wrapped legacy system in modular, <span class="tech-term">self-healing shell</span> without rewriting core logic.</p>
+          
+          <h4>Our Solution Architecture:</h4>
           <ul>
-            <li><strong>99.98% uptime</strong> across all operations</li>
-            <li><strong>$35K/month recovered</strong> in labor and penalties</li>
-            <li><strong>Zero outages</strong> in 6 months</li>
-            <li>Team reallocated to strategic growth planning</li>
+            <li>• <span class="tech-term">Sentinel polling routines</span> to detect drift and trigger <span class="tech-term">auto-recovery</span></li>
+            <li>• <span class="tech-term">Rollback-safe config layers</span> with snapshot hygiene</li>
+            <li>• <span class="tech-term">Alerting mesh</span> via MQTT and Slack for real-time visibility</li>
+            <li>• <span class="tech-term">Python-based watchdogs</span> to intercept and reroute failed logic</li>
+            <li>• <span class="tech-term">Audit trail injection</span> for every override and recovery event</li>
           </ul>
+          <p><strong>No core logic was rewritten. We built around it—surgically.</strong></p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Business Impact Section -->
+  <section class="section" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Proven <span class="text-gradient">Business Impact</span></h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+          System transformed from liability to strategic asset with measurable results.
+        </p>
+      </div>
+      
+      <div class="grid grid-4" style="gap: var(--space-lg); margin-top: var(--space-xl);">
+        <div class="metric-card reveal reveal-delay-1" data-metric="uptime">
+          <i class="metric-icon fas fa-shield-alt"></i>
+          <span class="metric-value" data-target="99.98" data-suffix="%">99.98%</span>
+          <span class="metric-label">System Uptime</span>
+          <div class="metric-tooltip">Measured continuously over 12 months of operation</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-2" data-metric="recovery">
+          <i class="metric-icon fas fa-bolt"></i>
+          <span class="metric-value" data-target="35000" data-prefix="$" data-suffix="K">$35K</span>
+          <span class="metric-label">Monthly Recovery</span>
+          <div class="metric-tooltip">Savings from reduced penalties and labor costs</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-3" data-metric="outages">
+          <i class="metric-icon fas fa-sync-alt"></i>
+          <span class="metric-value" data-target="0">0</span>
+          <span class="metric-label">Critical Outages</span>
+          <div class="metric-tooltip">Zero unplanned downtime incidents in 6 months</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-4" data-metric="reallocation">
+          <i class="metric-icon fas fa-arrow-up"></i>
+          <span class="metric-value" data-target="100" data-suffix="%">100%</span>
+          <span class="metric-label">Team Reallocation</span>
+          <div class="metric-tooltip">Staff moved from firefighting to strategic growth initiatives</div>
+        </div>
+      </div>
+      
+      <p class="text-center reveal" style="margin-top: var(--space-xl); color: var(--primary); font-weight: var(--fw-semibold); font-size: var(--fs-h5);">
+        The system didn't just survive—it became a strategic asset.
+      </p>
+    </div>
+  </section>
+
+  <!-- Case Study Continued -->
+  <section class="section">
+    <div class="container">
     </div>
   </section>
 
@@ -124,19 +182,19 @@
         <div class="card card-hover-glow reveal reveal-delay-1">
           <div class="card-icon"><i class="fas fa-handshake"></i></div>
           <h3 class="gradient-text-hover">Collaborative Discovery</h3>
-          <p>We work with your ops team, tech directors, and frontline staff to map real pain points. No rip-and-replace—we identify what truly needs fixing and preserve what works.</p>
+          <p>We work with your ops team, tech directors, and frontline staff to map real pain points. No <span class="tech-term">rip-and-replace</span>—we identify what truly needs fixing and preserve what works.</p>
         </div>
         
         <div class="card card-hover-glow reveal reveal-delay-2">
           <div class="card-icon"><i class="fas fa-tools"></i></div>
           <h3 class="gradient-text-hover">Surgical Integration</h3>
-          <p>We wrap legacy systems in modular, self-healing layers: sentinel monitoring, auto-recovery, rollback-safe configs, and real-time alerting—without rewriting core logic.</p>
+          <p>We wrap legacy systems in modular, <span class="tech-term">self-healing layers</span>: <span class="tech-term">sentinel monitoring</span>, <span class="tech-term">auto-recovery</span>, <span class="tech-term">rollback-safe configs</span>, and <span class="tech-term">real-time alerting</span>—without rewriting core logic.</p>
         </div>
         
         <div class="card card-hover-glow reveal reveal-delay-3">
           <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
           <h3 class="gradient-text-hover">Bulletproof Operations</h3>
-          <p>Your systems become autonomous: detecting drift, triggering recovery, preventing failures, and maintaining complete audit trails—turning fragile infrastructure into strategic assets.</p>
+          <p>Your systems become autonomous: detecting drift, triggering recovery, preventing failures, and maintaining complete <span class="tech-term">audit trails</span>—turning fragile infrastructure into strategic assets.</p>
         </div>
       </div>
     </div>
@@ -212,5 +270,73 @@
   <script src="../js/services-data.js"></script>
   <script src="../js/main.js"></script>
 
+  <script>
+    // Count-up Animation for Business Impact Metrics
+    document.addEventListener('DOMContentLoaded', function() {
+      // Count-up Animation for Metrics
+      function animateMetrics() {
+        const metricValues = document.querySelectorAll('.metric-value[data-target]');
+        
+        metricValues.forEach(value => {
+          const target = parseFloat(value.dataset.target);
+          const prefix = value.dataset.prefix || '';
+          const suffix = value.dataset.suffix || '';
+          const duration = 2000; // 2 seconds
+          const stepTime = 50; // Update every 50ms
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            
+            // Format the number based on the metric type
+            let displayValue;
+            if (target === 99.98) {
+              // Uptime percentage
+              displayValue = `${current.toFixed(2)}${suffix}`;
+            } else if (target === 35000) {
+              // Money value
+              displayValue = `${prefix}${Math.round(current / 1000)}${suffix}`;
+            } else if (suffix === '%') {
+              // Percentage
+              displayValue = `${Math.round(current)}${suffix}`;
+            } else {
+              // Regular number
+              displayValue = Math.round(current);
+            }
+            
+            value.textContent = displayValue;
+          }, stepTime);
+        });
+      }
+      
+      // Intersection Observer for scroll-triggered animations
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px'
+      };
+      
+      const metricObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateMetrics();
+            metricObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe the Business Impact section
+      const businessImpactSection = document.querySelector('[data-metric="uptime"]')?.closest('.section');
+      if (businessImpactSection) {
+        metricObserver.observe(businessImpactSection);
+      }
+    });
+  </script>
 </body>
 </html>
