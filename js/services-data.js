@@ -9,63 +9,72 @@ const SERVICES_DATA = [
     icon: '<i class="fas fa-brain"></i>',
     title: 'AI Strategy & Architecture',
     description: 'Design intelligent ecosystems that autonomously execute your business strategy with superhuman efficiency.',
-    category: 'core'
+    category: 'core',
+    url: 'services/ai-strategy.html'
   },
   {
     id: 'ai-systems',
     icon: '<i class="fas fa-network-wired"></i>',
     title: 'AI System Development',
     description: 'Build coordinated AI systems that collaborate, compete, and evolve to solve complex business challenges autonomously.',
-    category: 'core'
+    category: 'core',
+    url: 'services/ai-systems.html'
   },
   {
     id: 'autonomous-ops',
     icon: '<i class="fas fa-cogs"></i>',
     title: 'Autonomous Operations Platform',
     description: 'Transform legacy systems into self-healing, self-scaling platforms powered by intelligent agents that never sleep.',
-    category: 'core'
+    category: 'core',
+    url: 'services/self-healing-legacy-systems.html'
   },
   {
     id: 'innovation-labs',
     icon: '<i class="fas fa-rocket"></i>',
     title: 'AI Innovation Labs',
     description: 'Explore the bleeding edge of autonomous intelligence. We prototype tomorrow\'s business models using today\'s AI capabilities.',
-    category: 'core'
+    category: 'core',
+    url: 'services/innovation-labs.html'
   },
   {
     id: 'website-reimagining',
     icon: '<i class="fas fa-palette"></i>',
     title: 'AI-Powered Website Re-Imagining',
     description: 'Transform your digital presence with AI-driven design. We create websites that adapt, evolve, and optimize themselves in real-time.',
-    category: 'core'
+    category: 'core',
+    url: 'services/website-reimagining.html'
   },
   {
     id: 'data-streaming',
     icon: '<i class="fas fa-stream"></i>',
     title: 'Real-time Event and Data Streaming',
     description: 'Process millions of events per second with zero-latency intelligence that reacts faster than human thought. Build streaming architectures that turn data chaos into competitive clarity.',
-    category: 'core'
+    category: 'core',
+    url: 'services/data-streaming.html'
   },
   {
     id: 'subscription-management',
     icon: '<img src="images/payment_journey.svg" alt="Automated Subscription Journeys" />',
     title: 'Reinventing Subscription Management',
     description: 'Unify payment workflows, simplify billing complexity, and empower customers with seamless subscription control—all through a scalable, brandable platform built for modern businesses.',
-    category: 'new'
+    category: 'new',
+    url: 'services/subscription-management.html'
   },
   {
     id: 'transaction-branding',
     icon: '<img src="images/branded_wallet_icon.svg" alt="Branding Every Transaction" />',
     title: 'Branding Every Transaction',
     description: 'Activate expressive wallet experiences with personalized visuals, haptics, and audio that turn everyday payments into moments of brand and identity.',
-    category: 'new'
+    category: 'new',
+    url: 'services/transaction-branding.html'
   },
   {
     id: 'intelligence-everywhere',
     icon: '<img src="images/intelligence_everywhere.svg" alt="Intelligence Everywhere" />',
     title: 'Intelligence Everywhere',
     description: 'Connect and orchestrate smart infrastructure across factories, buildings, cities, and logistics networks. Deploy resilient IoT systems that automate, monitor, and optimize operations in real time.',
-    category: 'new'
+    category: 'new',
+    url: 'services/intelligence-everywhere.html'
   }
 ];
 
@@ -109,6 +118,25 @@ function renderServiceCards(containerId, context = 'services', services = SERVIC
 }
 
 /**
+ * Add click handlers to service cards
+ */
+function addServiceCardClickHandlers() {
+  const serviceCards = document.querySelectorAll('.service-card[data-service-id]');
+  
+  serviceCards.forEach(card => {
+    const serviceId = card.getAttribute('data-service-id');
+    const service = SERVICES_DATA.find(s => s.id === serviceId);
+    
+    if (service && service.url) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function() {
+        window.location.href = service.url;
+      });
+    }
+  });
+}
+
+/**
  * Initialize service cards on page load
  */
 function initializeServices() {
@@ -127,6 +155,9 @@ function initializeServices() {
     console.log('Found services container, rendering services');
     renderServiceCards('services-container', 'services');
   }
+
+  // Add click handlers after cards are rendered
+  setTimeout(addServiceCardClickHandlers, 100);
 }
 
 // Try multiple ways to ensure initialization
