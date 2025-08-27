@@ -832,27 +832,6 @@ small, .text-small, .footer-description {
   line-height: 1.4;
 }
 
-/* Technical Terms - Monospaced Font */
-.tech-term {
-  font-family: var(--font-mono);
-  font-weight: var(--fw-medium);
-  background: rgba(108, 99, 255, 0.1);
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.25rem;
-  font-size: 0.9em;
-}
-
-/* Auto-apply to common technical phrases */
-:is(p, li, span, div):has-text("self-healing"),
-:is(p, li, span, div):has-text("rollback logic"),
-:is(p, li, span, div):has-text("auto-recovery"),
-:is(p, li, span, div):has-text("sentinel polling"),
-:is(p, li, span, div):has-text("config layers"),
-:is(p, li, span, div):has-text("watchdogs"),
-:is(p, li, span, div):has-text("audit trail") {
-  font-family: var(--font-mono);
-  font-weight: var(--fw-medium);
-}
 
 /* Consistent spacing for cards */
 .card {
