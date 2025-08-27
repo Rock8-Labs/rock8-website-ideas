@@ -339,8 +339,26 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Custom cursor effect
   function initCustomCursor() {
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorCircle = document.querySelector('.cursor-circle');
+    // Check if we're on mobile (where cursor should be disabled)
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      return;
+    }
+    
+    // Create cursor elements if they don't exist
+    let cursorDot = document.querySelector('.cursor-dot');
+    let cursorCircle = document.querySelector('.cursor-circle');
+    
+    if (!cursorDot) {
+      cursorDot = document.createElement('div');
+      cursorDot.className = 'cursor-dot';
+      document.body.appendChild(cursorDot);
+    }
+    
+    if (!cursorCircle) {
+      cursorCircle = document.createElement('div');
+      cursorCircle.className = 'cursor-circle';
+      document.body.appendChild(cursorCircle);
+    }
     
     if (cursorDot && cursorCircle) {
       window.addEventListener('mousemove', e => {
@@ -351,18 +369,24 @@ document.addEventListener('DOMContentLoaded', function() {
         cursorCircle.style.top = e.clientY + 'px';
       });
       
-      // Custom cursor interactions
-      const cursorTargets = document.querySelectorAll('a, button, input, textarea, select, .btn, .navbar-link, [onclick], [href]');
-      
-      cursorTargets.forEach(target => {
-        target.addEventListener('mouseenter', () => {
+      // Custom cursor interactions - use event delegation for dynamic content
+      document.addEventListener('mouseenter', (e) => {
+        const target = e.target;
+        // Check if the element is clickable
+        if (target.matches('a, button, input, textarea, select, .btn, .navbar-link, .service-card, .card[onclick], [href], [onclick], .footer-link, .social-link, .metric-card, .blog-card, [data-service-id]') || 
+            target.closest('a, button, .btn, .navbar-link, .service-card, .card[onclick], [href], [onclick], .footer-link, .social-link, .metric-card, .blog-card, [data-service-id]')) {
           cursorCircle.classList.add('cursor-hover');
-        });
-        
-        target.addEventListener('mouseleave', () => {
+        }
+      }, true);
+      
+      document.addEventListener('mouseleave', (e) => {
+        const target = e.target;
+        // Check if the element is clickable
+        if (target.matches('a, button, input, textarea, select, .btn, .navbar-link, .service-card, .card[onclick], [href], [onclick], .footer-link, .social-link, .metric-card, .blog-card, [data-service-id]') || 
+            target.closest('a, button, .btn, .navbar-link, .service-card, .card[onclick], [href], [onclick], .footer-link, .social-link, .metric-card, .blog-card, [data-service-id]')) {
           cursorCircle.classList.remove('cursor-hover');
-        });
-      });
+        }
+      }, true);
     }
   }
   

@@ -6,6 +6,58 @@
 /* Import Variables */
 @import url('variables.css');
 
+/* Custom Cursor Styles */
+* {
+  cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.cursor-circle {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+}
+
+.cursor-circle.cursor-hover {
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border: 2px solid var(--secondary);
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+  
+  .cursor-dot,
+  .cursor-circle {
+    display: none;
+  }
+}
+
 /* Reset & Base Styles */
 *,
 *::before,

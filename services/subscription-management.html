@@ -290,6 +290,15 @@
           }
         });
         
+        // Fix footer links for subdirectory page
+        const footerLinks = document.querySelectorAll('.footer-link');
+        footerLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../')) {
+            link.setAttribute('href', '../' + href);
+          }
+        });
+        
         // Set active nav link for current page
         const currentPage = location.pathname.split('/').pop() || 'index.html';
         const activeNavLinks = document.querySelectorAll('.navbar-link');
