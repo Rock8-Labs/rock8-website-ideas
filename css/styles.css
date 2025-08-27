@@ -927,6 +927,21 @@ small, .text-small, .footer-description {
   line-height: 1;
 }
 
+.metric-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--electric-orange);
+  text-shadow: 0 0 8px rgba(255, 106, 0, 0.6);
+  font-family: var(--font-heading);
+}
+
+.metric-unit {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+  color: var(--electric-orange);
+  font-family: var(--font-body);
+}
+
 .metric-label {
   color: var(--text-secondary);
   font-size: var(--fs-small);
