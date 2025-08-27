@@ -157,6 +157,35 @@ p {
   color: var(--accent);
 }
 
+/* Universal Bullet Point Alignment */
+ul li {
+  text-indent: -1em;
+  padding-left: 1em;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Special handling for navigation and footer lists */
+.navbar-menu li,
+.footer-links li,
+.social-links li,
+.menu li {
+  text-indent: 0;
+  padding-left: 0;
+}
+
+/* Ensure consistent alignment in all card types */
+.card ul li,
+.service-card ul li,
+.blog-card ul li,
+.feature-card ul li,
+.testimonial-card ul li,
+.approach-item ul li {
+  text-indent: -1em;
+  padding-left: 1em;
+  line-height: 1.6;
+}
+
 .text-gradient {
   background-image: var(--gradient-primary);
   background-clip: text;

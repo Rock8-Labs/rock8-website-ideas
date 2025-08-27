@@ -67,9 +67,9 @@
           
           <h4>The Breakdown:</h4>
           <ul>
-            <li>• Daily <span class="tech-term">sync failures</span> between inventory and dispatch</li>
-            <li>• Manual overrides required for basic <span class="tech-term">routing logic</span></li>
-            <li>• No <span class="tech-term">rollback safety</span>, alerting, or <span class="tech-term">audit trail</span></li>
+            <li>• Daily sync failures between inventory and dispatch</li>
+            <li>• Manual overrides required for basic routing logic</li>
+            <li>• No rollback safety, alerting, or audit trail</li>
             <li>• Customer churn due to missed SLAs</li>
             <li>• Ops team burnout from constant firefighting</li>
             <li>• Zero visibility into root causes or failure patterns</li>
@@ -79,15 +79,15 @@
         <div class="card card-hover-glow reveal reveal-delay-2">
           <div class="card-icon"><i class="fas fa-tools"></i></div>
           <h3 class="gradient-text-hover">Surgical Integration</h3>
-          <p>Wrapped legacy system in modular, <span class="tech-term">self-healing shell</span> without rewriting core logic.</p>
+          <p>Wrapped legacy system in modular, self-healing shell without rewriting core logic.</p>
           
           <h4>Our Solution Architecture:</h4>
           <ul>
-            <li>• <span class="tech-term">Sentinel polling routines</span> to detect drift and trigger <span class="tech-term">auto-recovery</span></li>
-            <li>• <span class="tech-term">Rollback-safe config layers</span> with snapshot hygiene</li>
-            <li>• <span class="tech-term">Alerting mesh</span> via MQTT and Slack for real-time visibility</li>
-            <li>• <span class="tech-term">Python-based watchdogs</span> to intercept and reroute failed logic</li>
-            <li>• <span class="tech-term">Audit trail injection</span> for every override and recovery event</li>
+            <li>• Sentinel polling routines to detect drift and trigger auto-recovery</li>
+            <li>• Rollback-safe config layers with snapshot hygiene</li>
+            <li>• Alerting mesh via MQTT and Slack for real-time visibility</li>
+            <li>• Python-based watchdogs to intercept and reroute failed logic</li>
+            <li>• Audit trail injection for every override and recovery event</li>
           </ul>
           <p><strong>No core logic was rewritten. We built around it—surgically.</strong></p>
         </div>
@@ -280,7 +280,7 @@
         }
         
         // Fix navigation links for subdirectory page
-        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta');
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta, .navbar-logo');
         navLinks.forEach(link => {
           const href = link.getAttribute('href');
           if (href && !href.startsWith('http') && !href.startsWith('#')) {

@@ -66,9 +66,9 @@
           
           <h4>The Breakdown:</h4>
           <ul>
-            <li>• Factory sensors ran on <span class="tech-term">LoRaWAN</span>, while legacy controllers used <span class="tech-term">Modbus</span> and <span class="tech-term">CAN Bus</span></li>
-            <li>• Vendor-specific hubs created <span class="tech-term">data silos</span> across production zones</li>
-            <li>• <span class="tech-term">MQTT brokers</span> were misaligned, causing telemetry drift and blind spots</li>
+            <li>• Factory sensors ran on LoRaWAN, while legacy controllers used Modbus and CAN Bus</li>
+            <li>• Vendor-specific hubs created data silos across production zones</li>
+            <li>• MQTT brokers were misaligned, causing telemetry drift and blind spots</li>
             <li>• No unified dashboard—operators relied on manual reconciliation and guesswork</li>
             <li>• Tariff shocks and supply chain volatility demanded rapid production pivots—without the infrastructure to support them</li>
           </ul>
@@ -81,9 +81,9 @@
           
           <h4>Our Solution Architecture:</h4>
           <ul>
-            <li>• Partnered with client engineers and protocol specialists to map all topologies—<span class="tech-term">LoRaWAN</span>, <span class="tech-term">MQTT</span>, <span class="tech-term">OPC UA</span>, <span class="tech-term">Modbus</span>, <span class="tech-term">TCP/IP</span>, <span class="tech-term">CAN Bus</span></li>
-            <li>• Deployed modular adapters to normalize telemetry across <span class="tech-term">microcontrollers</span> and hubs</li>
-            <li>• Built a resilient <span class="tech-term">orchestration layer</span> with rollback logic and <span class="tech-term">sentinel detection</span></li>
+            <li>• Partnered with client engineers and protocol specialists to map all topologies—LoRaWAN, MQTT, OPC UA, Modbus, TCP/IP, CAN Bus</li>
+            <li>• Deployed modular adapters to normalize telemetry across microcontrollers and hubs</li>
+            <li>• Built a resilient orchestration layer with rollback logic and sentinel detection</li>
             <li>• Enabled real-time dashboards with unified visibility from edge to cloud—empowering rapid capacity shifts and strategic decision-making</li>
             <li>• Accelerated time-to-value with sub-week rollout across production zones—driving client retention and competitive wins</li>
           </ul>
@@ -281,7 +281,7 @@
         }
         
         // Fix navigation links for subdirectory page
-        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta');
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta, .navbar-logo');
         navLinks.forEach(link => {
           const href = link.getAttribute('href');
           if (href && !href.startsWith('http') && !href.startsWith('#')) {

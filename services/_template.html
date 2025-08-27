@@ -270,7 +270,7 @@
         }
         
         // Fix navigation links for subdirectory page
-        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta');
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta, .navbar-logo');
         navLinks.forEach(link => {
           const href = link.getAttribute('href');
           if (href && !href.startsWith('http') && !href.startsWith('#')) {
