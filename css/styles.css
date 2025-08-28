@@ -1706,8 +1706,8 @@ textarea.form-control {
 /* Solutions Carousel Styles */
 .solutions-carousel-container {
   position: relative;
-  margin: var(--space-xl) auto;
-  max-width: calc(100% - calc(var(--space-sm) * 2) - 100px);
+  margin: var(--space-xl) 0;
+  padding: 0 80px;
   overflow: hidden;
 }
 
@@ -1818,8 +1818,8 @@ textarea.form-control {
 .carousel-nav {
   position: absolute;
   top: 50%;
-  left: var(--space-sm);
-  right: var(--space-sm);
+  left: 20px;
+  right: 20px;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
