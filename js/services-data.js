@@ -10,7 +10,8 @@ const SERVICES_DATA = [
     title: 'AI Strategy & Architecture',
     description: 'Design intelligent ecosystems that autonomously execute your business strategy with superhuman efficiency.',
     category: 'core',
-    url: 'services/ai-strategy-architecture.html'
+    url: 'services/ai-strategy-architecture.html',
+    heroImage: 'images/ai-strategy_1_816x816.png'
   },
   {
     id: 'ai-systems',
@@ -18,7 +19,8 @@ const SERVICES_DATA = [
     title: 'AI System Development',
     description: 'Build coordinated AI systems that collaborate, compete, and evolve to solve complex business challenges autonomously.',
     category: 'core',
-    url: 'services/ai-systems-development.html'
+    url: 'services/ai-systems-development.html',
+    heroImage: 'images/AI-systems-dev_1.png'
   },
   {
     id: 'autonomous-ops',
@@ -26,7 +28,8 @@ const SERVICES_DATA = [
     title: 'Autonomous Operations Platform',
     description: 'Transform legacy systems into self-healing, self-scaling platforms powered by intelligent agents that never sleep.',
     category: 'core',
-    url: 'services/self-healing-legacy-systems.html'
+    url: 'services/self-healing-legacy-systems.html',
+    heroImage: 'images/visualize_legacy.png'
   },
   {
     id: 'innovation-labs',
@@ -34,7 +37,8 @@ const SERVICES_DATA = [
     title: 'AI Innovation Labs',
     description: 'Explore the bleeding edge of autonomous intelligence. We prototype tomorrow\'s business models using today\'s AI capabilities.',
     category: 'core',
-    url: 'services/ai-innovation-labs.html'
+    url: 'services/ai-innovation-labs.html',
+    heroImage: 'images/hardware_meets_synops_1.png'
   },
   {
     id: 'website-reimagining',
@@ -42,7 +46,8 @@ const SERVICES_DATA = [
     title: 'AI-Powered Website Re-Imagining',
     description: 'Transform your digital presence with AI-driven design. We create websites that adapt, evolve, and optimize themselves in real-time.',
     category: 'core',
-    url: 'services/website-transformation.html'
+    url: 'services/website-transformation.html',
+    heroImage: 'images/websites_reimagined_1.png'
   },
   {
     id: 'data-streaming',
@@ -50,7 +55,8 @@ const SERVICES_DATA = [
     title: 'Real-time Event and Data Streaming',
     description: 'Process millions of events per second with zero-latency intelligence that reacts faster than human thought. Build streaming architectures that turn data chaos into competitive clarity.',
     category: 'core',
-    url: 'services/data-streaming.html'
+    url: 'services/data-streaming.html',
+    heroImage: 'images/data_streaming_1.png'
   },
   {
     id: 'subscription-management',
@@ -58,7 +64,8 @@ const SERVICES_DATA = [
     title: 'Reinventing Subscription Management',
     description: 'Unify payment workflows, simplify billing complexity, and empower customers with seamless subscription control—all through a scalable, brandable platform built for modern businesses.',
     category: 'new',
-    url: 'services/subscription-management.html'
+    url: 'services/subscription-management.html',
+    heroImage: 'images/reinventing_sub_mgmt_(midjourney)_1.png'
   },
   {
     id: 'transaction-branding',
@@ -66,7 +73,8 @@ const SERVICES_DATA = [
     title: 'Branding Every Transaction',
     description: 'Activate expressive wallet experiences with personalized visuals, haptics, and audio that turn everyday payments into moments of brand and identity.',
     category: 'new',
-    url: 'services/transaction-branding.html'
+    url: 'services/transaction-branding.html',
+    heroImage: 'images/rock8_branded_card_1.png'
   },
   {
     id: 'intelligence-everywhere',
@@ -74,7 +82,8 @@ const SERVICES_DATA = [
     title: 'Intelligence Everywhere',
     description: 'Connect and orchestrate smart infrastructure across factories, buildings, cities, and logistics networks. Deploy resilient IoT systems that automate, monitor, and optimize operations in real time.',
     category: 'new',
-    url: 'services/intelligence-everywhere.html'
+    url: 'services/intelligence-everywhere.html',
+    heroImage: 'images/intelligence_everywhere_7.png'
   }
 ];
 
@@ -137,12 +146,165 @@ function addServiceCardClickHandlers() {
 }
 
 /**
+ * Generate HTML for a carousel slide
+ * @param {Object} service - Service data object
+ * @param {number} index - Slide index
+ * @returns {string} HTML string for the carousel slide
+ */
+function generateCarouselSlide(service, index) {
+  const heroImage = service.heroImage || 'images/ai-business-transformation.svg';
+  
+  return `
+    <div class="solution-slide" data-service-id="${service.id}">
+      <div class="solution-slide-bg" style="background-image: url('${heroImage}');"></div>
+      <div class="solution-slide-overlay">
+        <h3 class="solution-slide-title">${service.title}</h3>
+        <a href="${service.url}" class="solution-slide-cta">
+          Learn More <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Initialize Solutions Carousel
+ */
+function initializeSolutionsCarousel() {
+  const carouselContainer = document.getElementById('solutions-carousel');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  
+  if (!carouselContainer) return;
+  
+  let currentSlide = 0;
+  const slidesPerView = {
+    desktop: 3,
+    tablet: 2,
+    mobile: 1
+  };
+  
+  // Generate carousel slides
+  const slidesHTML = SERVICES_DATA.map((service, index) => 
+    generateCarouselSlide(service, index)
+  ).join('');
+  
+  carouselContainer.innerHTML = slidesHTML;
+  
+  // Generate dots
+  if (dotsContainer) {
+    const dotsHTML = SERVICES_DATA.map((_, index) => 
+      `<button class="carousel-dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></button>`
+    ).join('');
+    dotsContainer.innerHTML = dotsHTML;
+  }
+  
+  // Get current slides per view based on screen size
+  function getSlidesPerView() {
+    if (window.innerWidth <= 768) return slidesPerView.mobile;
+    if (window.innerWidth <= 1024) return slidesPerView.tablet;
+    return slidesPerView.desktop;
+  }
+  
+  // Update carousel position
+  function updateCarousel() {
+    const currentSlidesPerView = getSlidesPerView();
+    const maxSlide = Math.max(0, SERVICES_DATA.length - currentSlidesPerView);
+    
+    // Ensure currentSlide is within bounds
+    if (currentSlide > maxSlide) {
+      currentSlide = maxSlide;
+    }
+    
+    const translateX = -(currentSlide * (100 / currentSlidesPerView));
+    carouselContainer.style.transform = `translateX(${translateX}%)`;
+    
+    // Update button states
+    if (prevBtn) {
+      prevBtn.disabled = currentSlide <= 0;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = currentSlide >= maxSlide;
+    }
+    
+    // Update dots
+    const dots = dotsContainer?.querySelectorAll('.carousel-dot');
+    dots?.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+  
+  // Navigation event listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+      }
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const maxSlide = Math.max(0, SERVICES_DATA.length - getSlidesPerView());
+      if (currentSlide < maxSlide) {
+        currentSlide++;
+        updateCarousel();
+      }
+    });
+  }
+  
+  // Dots navigation
+  if (dotsContainer) {
+    dotsContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('carousel-dot')) {
+        currentSlide = parseInt(e.target.dataset.slide);
+        updateCarousel();
+      }
+    });
+  }
+  
+  // Handle window resize
+  window.addEventListener('resize', updateCarousel);
+  
+  // Initialize
+  updateCarousel();
+  
+  // Add click handlers to slides
+  setTimeout(() => {
+    const slides = carouselContainer.querySelectorAll('.solution-slide');
+    slides.forEach(slide => {
+      slide.addEventListener('click', (e) => {
+        // If clicking on CTA link, let it handle navigation
+        if (e.target.closest('.solution-slide-cta')) return;
+        
+        // Otherwise, navigate to the service page
+        const serviceId = slide.dataset.serviceId;
+        const service = SERVICES_DATA.find(s => s.id === serviceId);
+        if (service?.url) {
+          window.location.href = service.url;
+        }
+      });
+    });
+  }, 100);
+}
+
+/**
  * Initialize service cards on page load
  */
 function initializeServices() {
   console.log('Initializing services...');
   
-  // Check if we're on the home page (has home-services-container)
+  // Check if we're on the home page (has solutions-carousel)
+  const carouselContainer = document.getElementById('solutions-carousel');
+  if (carouselContainer) {
+    console.log('Found carousel container, initializing carousel');
+    initializeSolutionsCarousel();
+    return;
+  }
+
+  // Check if we're on the home page (has home-services-container) - fallback
   const homeContainer = document.getElementById('home-services-container');
   if (homeContainer) {
     console.log('Found home container, rendering services');
