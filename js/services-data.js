@@ -5,6 +5,24 @@
 
 const SERVICES_DATA = [
   {
+    id: 'subscription-management',
+    icon: '<img src="images/payment_journey.svg" alt="Automated Subscription Journeys" />',
+    title: 'Reinventing Subscription Management',
+    description: 'Unify payment workflows, simplify billing complexity, and empower customers with seamless subscription control—all through a scalable, brandable platform built for modern businesses.',
+    category: 'new',
+    url: 'services/subscription-management.html',
+    heroImage: 'images/reinventing_sub_mgmt_(midjourney)_1.png'
+  },
+  {
+    id: 'transaction-branding',
+    icon: '<img src="images/branded_wallet_icon.svg" alt="Branding Every Transaction" />',
+    title: 'Branding Every Transaction',
+    description: 'Activate expressive wallet experiences with personalized visuals, haptics, and audio that turn everyday payments into moments of brand and identity.',
+    category: 'new',
+    url: 'services/transaction-branding.html',
+    heroImage: 'images/rock8_branded_card_1.png'
+  },
+  {
     id: 'ai-strategy',
     icon: '<i class="fas fa-brain"></i>',
     title: 'AI Strategy & Architecture',
@@ -57,24 +75,6 @@ const SERVICES_DATA = [
     category: 'core',
     url: 'services/data-streaming.html',
     heroImage: 'images/data_streaming_1.png'
-  },
-  {
-    id: 'subscription-management',
-    icon: '<img src="images/payment_journey.svg" alt="Automated Subscription Journeys" />',
-    title: 'Reinventing Subscription Management',
-    description: 'Unify payment workflows, simplify billing complexity, and empower customers with seamless subscription control—all through a scalable, brandable platform built for modern businesses.',
-    category: 'new',
-    url: 'services/subscription-management.html',
-    heroImage: 'images/reinventing_sub_mgmt_(midjourney)_1.png'
-  },
-  {
-    id: 'transaction-branding',
-    icon: '<img src="images/branded_wallet_icon.svg" alt="Branding Every Transaction" />',
-    title: 'Branding Every Transaction',
-    description: 'Activate expressive wallet experiences with personalized visuals, haptics, and audio that turn everyday payments into moments of brand and identity.',
-    category: 'new',
-    url: 'services/transaction-branding.html',
-    heroImage: 'images/rock8_branded_card_1.png'
   },
   {
     id: 'intelligence-everywhere',
