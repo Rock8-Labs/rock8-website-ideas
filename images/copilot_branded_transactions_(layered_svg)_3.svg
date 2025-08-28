@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <g id="background">
+    <rect width="800" height="800" fill="#0c1828"/>
+  </g>
+  <g id="transaction_path">
+    <path d="M100 400 L700 400" stroke="#00e0ff" stroke-width="2"/>
+    <circle cx="200" cy="400" r="6" fill="#ff6a00"/>
+    <circle cx="400" cy="400" r="6" fill="#ff6a00"/>
+    <circle cx="600" cy="400" r="6" fill="#ff6a00"/>
+  </g>
+  <g id="card_instances">
+    <g id="card_1">
+      <rect x="180" y="360" width="40" height="60" rx="6" fill="#1f2a44" stroke="#00e0ff" stroke-width="1"/>
+      <rect x="185" y="370" width="30" height="8" fill="#ff6a00"/>
+    </g>
+    <g id="card_2">
+      <rect x="380" y="360" width="40" height="60" rx="6" fill="#1f2a44" stroke="#00e0ff" stroke-width="1"/>
+      <rect x="385" y="370" width="30" height="8" fill="#ff6a00"/>
+    </g>
+    <g id="card_3">
+      <rect x="580" y="360" width="40" height="60" rx="6" fill="#1f2a44" stroke="#00e0ff" stroke-width="1"/>
+      <rect x="585" y="370" width="30" height="8" fill="#ff6a00"/>
+    </g>
+  </g>
+  <g id="glyphs_per_card">
+    <circle cx="200" cy="320" r="10" fill="#ff6a00"/>
+    <rect x="400" y="310" width="20" height="20" fill="#ff6a00"/>
+    <polygon points="600,300 620,330 580,330" fill="#ff6a00"/>
+  </g>
+</svg>

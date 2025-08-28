@@ -10,7 +10,7 @@ const SERVICES_DATA = [
     title: 'AI Strategy & Architecture',
     description: 'Design intelligent ecosystems that autonomously execute your business strategy with superhuman efficiency.',
     category: 'core',
-    url: 'services/ai-strategy.html'
+    url: 'services/ai-strategy-architecture.html'
   },
   {
     id: 'ai-systems',
