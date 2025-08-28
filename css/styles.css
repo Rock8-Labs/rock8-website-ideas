@@ -1719,11 +1719,11 @@ textarea.form-control {
 .solution-slide {
   flex: 0 0 calc(33.333% - var(--space-lg));
   position: relative;
-  height: 300px;
+  height: 330px;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   background: var(--dark-card);
-  border: 1px solid var(--dark-border);
+  border: 1px solid var(--primary);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -1741,7 +1741,7 @@ textarea.form-control {
   bottom: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.30;
+  opacity: 0.40;
   transition: opacity 0.3s ease;
 }
 
@@ -1756,10 +1756,9 @@ textarea.form-control {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
-  padding: var(--space-lg);
+  padding: var(--space-md) var(--space-lg) var(--space-lg) var(--space-lg);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   text-align: left;
 }
 
@@ -1772,7 +1771,23 @@ textarea.form-control {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.solution-slide-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  margin-bottom: auto;
+  flex-grow: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 .solution-slide-cta {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-lg);
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
@@ -1833,7 +1848,7 @@ textarea.form-control {
 }
 
 .carousel-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   cursor: not-allowed;
   transform: scale(1);
 }

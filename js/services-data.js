@@ -159,6 +159,7 @@ function generateCarouselSlide(service, index) {
       <div class="solution-slide-bg" style="background-image: url('${heroImage}');"></div>
       <div class="solution-slide-overlay">
         <h3 class="solution-slide-title">${service.title}</h3>
+        <p class="solution-slide-description">${service.description}</p>
         <a href="${service.url}" class="solution-slide-cta">
           Learn More <i class="fas fa-arrow-right"></i>
         </a>
@@ -192,9 +193,12 @@ function initializeSolutionsCarousel() {
   
   carouselContainer.innerHTML = slidesHTML;
   
-  // Generate dots
+  // Generate dots based on number of possible slide positions
   if (dotsContainer) {
-    const dotsHTML = SERVICES_DATA.map((_, index) => 
+    const currentSlidesPerView = getSlidesPerView();
+    const maxSlidePositions = Math.max(1, SERVICES_DATA.length - currentSlidesPerView + 1);
+    
+    const dotsHTML = Array.from({length: maxSlidePositions}, (_, index) => 
       `<button class="carousel-dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></button>`
     ).join('');
     dotsContainer.innerHTML = dotsHTML;
@@ -266,10 +270,82 @@ function initializeSolutionsCarousel() {
   }
   
   // Handle window resize
-  window.addEventListener('resize', updateCarousel);
+  window.addEventListener('resize', () => {
+    // Regenerate dots for new screen size
+    if (dotsContainer) {
+      const currentSlidesPerView = getSlidesPerView();
+      const maxSlidePositions = Math.max(1, SERVICES_DATA.length - currentSlidesPerView + 1);
+      
+      const dotsHTML = Array.from({length: maxSlidePositions}, (_, index) => 
+        `<button class="carousel-dot ${index === currentSlide ? 'active' : ''}" data-slide="${index}"></button>`
+      ).join('');
+      dotsContainer.innerHTML = dotsHTML;
+    }
+    updateCarousel();
+  });
+  
+  // Auto-play functionality with pendulum motion
+  let autoPlayDirection = 1; // 1 for forward, -1 for backward
+  let autoPlayTimer = null;
+  let isPaused = false;
+  
+  function startAutoPlay() {
+    if (autoPlayTimer) clearInterval(autoPlayTimer);
+    
+    autoPlayTimer = setInterval(() => {
+      if (isPaused) return;
+      
+      const maxSlide = Math.max(0, SERVICES_DATA.length - getSlidesPerView());
+      
+      // Check if we've reached the end in current direction
+      if (autoPlayDirection === 1 && currentSlide >= maxSlide) {
+        // Reached the end, pause and reverse direction
+        isPaused = true;
+        setTimeout(() => {
+          autoPlayDirection = -1;
+          isPaused = false;
+        }, 3000); // 3 second pause
+      } else if (autoPlayDirection === -1 && currentSlide <= 0) {
+        // Reached the beginning, pause and reverse direction
+        isPaused = true;
+        setTimeout(() => {
+          autoPlayDirection = 1;
+          isPaused = false;
+        }, 3000); // 3 second pause
+      } else {
+        // Move in current direction
+        currentSlide += autoPlayDirection;
+        updateCarousel();
+      }
+    }, 10000); // Move every 10 seconds
+  }
+  
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+  
+  // Pause auto-play on user interaction
+  const pauseAutoPlay = () => {
+    stopAutoPlay();
+    // Restart after 30 seconds of no interaction
+    setTimeout(startAutoPlay, 30000);
+  };
+  
+  // Add pause on interaction listeners
+  if (prevBtn) prevBtn.addEventListener('click', pauseAutoPlay);
+  if (nextBtn) nextBtn.addEventListener('click', pauseAutoPlay);
+  if (dotsContainer) dotsContainer.addEventListener('click', pauseAutoPlay);
+  
+  // Pause on hover
+  carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+  carouselContainer.addEventListener('mouseleave', startAutoPlay);
   
   // Initialize
   updateCarousel();
+  startAutoPlay();
   
   // Add click handlers to slides
   setTimeout(() => {
