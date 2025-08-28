@@ -18,7 +18,7 @@ const SERVICES_DATA = [
     title: 'AI System Development',
     description: 'Build coordinated AI systems that collaborate, compete, and evolve to solve complex business challenges autonomously.',
     category: 'core',
-    url: 'services/ai-systems.html'
+    url: 'services/ai-systems-development.html'
   },
   {
     id: 'autonomous-ops',
