@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const typingElement = document.querySelector('.typing-effect');
   if (typingElement) {
     typingElement.style.width = '0';
-    typingElement.style.animation = 'typing 3.5s steps(40, end) forwards, blink .75s step-end infinite';
+    typingElement.style.animation = 'typing 3.5s steps(40, end) forwards';
   }
   
   // Mobile device detection

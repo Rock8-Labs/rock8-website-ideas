@@ -74,11 +74,9 @@
 .typing-effect {
   overflow: visible;
   white-space: normal;
-  border-right: 3px solid var(--primary);
   width: auto;
   animation: 
-    typing 3.5s steps(40, end) forwards,
-    blink .75s step-end infinite;
+    typing 3.5s steps(40, end) forwards;
 }
 
 /* Reveal animation for sections */
