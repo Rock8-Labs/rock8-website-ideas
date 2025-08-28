@@ -288,12 +288,13 @@ function initializeSolutionsCarousel() {
   let autoPlayDirection = 1; // 1 for forward, -1 for backward
   let autoPlayTimer = null;
   let isPaused = false;
+  let isManuallyPaused = false;
   
   function startAutoPlay() {
     if (autoPlayTimer) clearInterval(autoPlayTimer);
     
     autoPlayTimer = setInterval(() => {
-      if (isPaused) return;
+      if (isPaused || isManuallyPaused) return;
       
       const maxSlide = Math.max(0, SERVICES_DATA.length - getSlidesPerView());
       
@@ -347,6 +348,24 @@ function initializeSolutionsCarousel() {
   updateCarousel();
   startAutoPlay();
   
+  // Create pause notification
+  function createPauseNotification() {
+    const notification = document.createElement('div');
+    notification.className = 'carousel-pause-notification';
+    notification.innerHTML = `
+      <i class="fas fa-pause"></i>
+      <span>Carousel motion paused - click again to resume</span>
+    `;
+    document.body.appendChild(notification);
+    
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.remove();
+      }
+    }, 3000);
+  }
+
   // Add click handlers to slides
   setTimeout(() => {
     const slides = carouselContainer.querySelectorAll('.solution-slide');
@@ -355,11 +374,17 @@ function initializeSolutionsCarousel() {
         // If clicking on CTA link, let it handle navigation
         if (e.target.closest('.solution-slide-cta')) return;
         
-        // Otherwise, navigate to the service page
-        const serviceId = slide.dataset.serviceId;
-        const service = SERVICES_DATA.find(s => s.id === serviceId);
-        if (service?.url) {
-          window.location.href = service.url;
+        // Toggle manual pause
+        if (!isManuallyPaused) {
+          // Pause the carousel
+          isManuallyPaused = true;
+          createPauseNotification();
+        } else {
+          // Resume the carousel
+          isManuallyPaused = false;
+          // Remove any existing notifications
+          const existingNotifications = document.querySelectorAll('.carousel-pause-notification');
+          existingNotifications.forEach(n => n.remove());
         }
       });
     });
