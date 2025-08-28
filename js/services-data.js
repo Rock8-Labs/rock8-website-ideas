@@ -34,7 +34,7 @@ const SERVICES_DATA = [
     title: 'AI Innovation Labs',
     description: 'Explore the bleeding edge of autonomous intelligence. We prototype tomorrow\'s business models using today\'s AI capabilities.',
     category: 'core',
-    url: 'services/innovation-labs.html'
+    url: 'services/ai-innovation-labs.html'
   },
   {
     id: 'website-reimagining',
