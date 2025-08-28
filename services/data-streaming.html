@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Event and Data Streaming - Rock8.io</title>
+  <meta name="description" content="Process millions of events per second with zero-latency intelligence. From chaotic data flows to modular streaming architectures that react faster than human thought.">
+  <meta name="keywords" content="real-time streaming, event processing, Apache Flink, Redpanda, data pipelines, low-latency systems, stream processing">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/rock8icon.png" type="image/x-icon">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" as="style">
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="hero solution-hero">
+    <div class="hero-bg">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="hero-content">
+          <h1 class="hero-title display reveal">
+            Real-Time Event and Data Streaming: From <span class="text-gradient">Chaotic Data Flows to Zero-Latency Intelligence</span>
+          </h1>
+          <p class="hero-subtitle reveal reveal-delay-1">
+            Process millions of events per second with modular clarity and sub-second responsiveness. Rock8 builds streaming architectures that react faster than human thought.
+          </p>
+        </div>
+        <div class="hero-image reveal reveal-delay-2">
+          <img src="../images/ai-business-transformation.svg" alt="Real-Time Data Streaming Visualization">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Real-World <span class="text-gradient">Transformation</span></h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 700px;">
+          Franchise operations transformation: from delayed metrics to real-time operational intelligence.
+        </p>
+      </div>
+      
+      <div class="grid grid-2" style="gap: var(--space-lg);">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <h3 class="gradient-text-hover">Chaotic data flows cripple operations</h3>
+          <p>Multi-location franchise struggled with delayed operational metrics and fragmented data streams across their network.</p>
+          
+          <h4>The Breakdown:</h4>
+          <ul>
+            <li>• Legacy Kafka/Confluent setup with 120-250ms latency under load</li>
+            <li>• Infrastructure footprint of 6-10 JVM nodes consuming excessive resources</li>
+            <li>• 20-40 hours monthly ops overhead managing streaming infrastructure</li>
+            <li>• $0.80 cost per 1K events/sec with poor cost-to-throughput ratio</li>
+            <li>• Delayed dashboards prevented real-time quality assurance across locations</li>
+            <li>• No rollback-safe infrastructure for failed deployments or drift events</li>
+          </ul>
+        </div>
+
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="fas fa-stream"></i></div>
+          <h3 class="gradient-text-hover">Zero-latency streaming architecture</h3>
+          <p>Built modular streaming platform with sub-second decisioning and ringfenced resilience for operational intelligence.</p>
+          
+          <h4>Our Solution Architecture:</h4>
+          <ul>
+            <li>• Deployed Redpanda for Kafka-compatible ingestion without JVM/Zookeeper overhead</li>
+            <li>• Implemented Apache Flink for real-time joins, windowing, and enrichment processing</li>
+            <li>• Built Druid-powered OLAP queries with sub-second response times and built-in rollup</li>
+            <li>• Created franchise QA dashboards with live operational metrics and anomaly detection</li>
+            <li>• Established Terraform and Kubernetes infrastructure for deployable, scalable streams</li>
+          </ul>
+          <p><strong>Zero-latency intelligence delivered real-time operational clarity and cost efficiency.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Technologies Section -->
+  <section class="section" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">High-throughput, <span class="text-gradient">low-latency streaming systems</span></h2>
+      </div>
+      
+      <div class="grid grid-2" style="gap: var(--space-lg); margin-top: var(--space-xl);">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3 class="gradient-text-hover">Redpanda ingestion layer</h3>
+          <p>Kafka-compatible but faster, leaner, and free of JVM and Zookeeper overhead for superior performance.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+          <h3 class="gradient-text-hover">Apache Flink processing</h3>
+          <p>Real-time joins, windowing, and enrichment across massive event volumes with stateful stream processing.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-3">
+          <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="gradient-text-hover">Druid OLAP queries</h3>
+          <p>Sub-second query response with built-in rollup, perfect for dashboards and anomaly detection systems.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-4">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="gradient-text-hover">Rollback-safe infrastructure</h3>
+          <p>Terraform and Kubernetes ensure every stream is deployable, scalable, and rollback-safe by design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Proven <span class="text-gradient">use cases delivered</span></h2>
+      </div>
+      
+      <div class="grid grid-2" style="gap: var(--space-lg); margin-top: var(--space-xl);">
+        <div class="card card-hover-glow reveal reveal-delay-1">
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="gradient-text-hover">Franchise QA dashboards</h3>
+          <p>Live operational metrics with real-time quality assurance across multiple locations.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-2">
+          <div class="card-icon"><i class="fas fa-tv"></i></div>
+          <h3 class="gradient-text-hover">Semantic ad muting systems</h3>
+          <p>HDMI capture with IR control for intelligent content filtering and user experience optimization.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-3">
+          <div class="card-icon"><i class="fas fa-credit-card"></i></div>
+          <h3 class="gradient-text-hover">Credit polling with sentinel detection</h3>
+          <p>Automated monitoring systems for service refresh cycles and anomaly detection.</p>
+        </div>
+        
+        <div class="card card-hover-glow reveal reveal-delay-4">
+          <div class="card-icon"><i class="fas fa-satellite-dish"></i></div>
+          <h3 class="gradient-text-hover">Vertical-specific telemetry</h3>
+          <p>Custom streaming solutions for service businesses, ecommerce platforms, and SaaS operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Impact Section -->
+  <section class="section" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="mb-lg">Proven <span class="text-gradient">Performance Impact</span></h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+          Zero-latency intelligence delivered real-time operational clarity and cost efficiency.
+        </p>
+      </div>
+      
+      <div class="grid grid-4" style="gap: var(--space-lg); margin-top: var(--space-xl);">
+        <div class="metric-card reveal reveal-delay-1" data-metric="latency">
+          <i class="metric-icon fas fa-bolt"></i>
+          <span class="metric-value" data-target="10" data-suffix="">10</span>
+          <span class="metric-label">Millisecond Latency Under Load</span>
+          <div class="metric-tooltip">Reduced from 120-250ms with legacy systems</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-2" data-metric="footprint">
+          <i class="metric-icon fas fa-server"></i>
+          <span class="metric-value" data-target="2" data-suffix="">2</span>
+          <span class="metric-label">Lightweight Container Footprint</span>
+          <div class="metric-tooltip">Down from 6-10 JVM nodes</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-3" data-metric="overhead">
+          <i class="metric-icon fas fa-clock"></i>
+          <span class="metric-value" data-target="5" data-suffix="">5</span>
+          <span class="metric-label">Hours Monthly Ops Overhead</span>
+          <div class="metric-tooltip">Reduced from 20-40 hours monthly</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-4" data-metric="cost">
+          <i class="metric-icon fas fa-dollar-sign"></i>
+          <span class="metric-value" data-target="0.12" data-suffix="">0.12</span>
+          <span class="metric-label">Cost Per 1K Events/Second</span>
+          <div class="metric-tooltip">Improved from $0.80 cost-to-throughput ratio</div>
+        </div>
+      </div>
+      
+      <p class="text-center reveal" style="margin-top: var(--space-xl); color: var(--primary); font-weight: var(--fw-semibold); font-size: var(--fs-h5);">
+        From chaotic data flows to zero-latency intelligence—streaming architecture realized.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--dark-card); border-top: 1px solid var(--dark-border);">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="mb-lg">Ready to Stream Smarter?</h2>
+        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+          We don't just stream data—we stream meaning. Let's build a pipeline that thinks faster than your users do.
+        </p>
+        <div class="btn-group mt-lg">
+          <a href="../contact.html" class="btn btn-primary btn-lg">Book Streaming Architecture Assessment</a>
+          <a href="../services.html" class="btn btn-outline btn-lg">Preview a Real-Time Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <!-- JavaScript -->
+  <script src="../js/services-data.js"></script>
+  <script src="../js/main.js"></script>
+
+  <script>
+    // Count-up Animation for Business Impact Metrics
+    document.addEventListener('DOMContentLoaded', function() {
+      // Count-up Animation for Metrics
+      function animateMetrics() {
+        const metricValues = document.querySelectorAll('.metric-value[data-target]');
+        
+        metricValues.forEach(value => {
+          const target = parseFloat(value.dataset.target);
+          const suffix = value.dataset.suffix || '';
+          const duration = 2000; // 2 seconds
+          const stepTime = 50; // Update every 50ms
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            
+            // Format the number based on the metric type
+            let displayValue;
+            if (target === 0.12) {
+              displayValue = `$${current.toFixed(2)}`;
+            } else {
+              displayValue = `${Math.round(current)}`;
+            }
+            
+            value.textContent = displayValue;
+          }, stepTime);
+        });
+      }
+      
+      // Intersection Observer for scroll-triggered animations
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px'
+      };
+      
+      const metricObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateMetrics();
+            metricObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe the Business Impact section
+      const businessImpactSection = document.querySelector('[data-metric="latency"]')?.closest('.section');
+      if (businessImpactSection) {
+        metricObserver.observe(businessImpactSection);
+      }
+    });
+  </script>
+  
+  <!-- Load Header and Footer -->
+  <script>
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("../includes/header.html");
+        const footerResponse = await fetch("../includes/footer.html");
+        
+        if (headerResponse.ok) {
+          document.getElementById("header").innerHTML = await headerResponse.text();
+        }
+        
+        if (footerResponse.ok) {
+          document.getElementById("footer").innerHTML = await footerResponse.text();
+        }
+        
+        // Fix navigation links for subdirectory page
+        const navLinks = document.querySelectorAll('.navbar-link, .navbar-cta, .navbar-logo');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('#')) {
+            link.setAttribute('href', '../' + href);
+          }
+        });
+        
+        // Fix image paths in header and footer for subdirectory page
+        const images = document.querySelectorAll('#header img, #footer img');
+        images.forEach(img => {
+          const src = img.getAttribute('src');
+          if (src && !src.startsWith('http') && !src.startsWith('/')) {
+            img.setAttribute('src', '../' + src);
+          }
+        });
+        
+        // Fix footer links for subdirectory page
+        const footerLinks = document.querySelectorAll('.footer-link');
+        footerLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../')) {
+            link.setAttribute('href', '../' + href);
+          }
+        });
+        
+        // Set active nav link for current page
+        const currentPage = location.pathname.split('/').pop() || 'index.html';
+        const activeNavLinks = document.querySelectorAll('.navbar-link');
+        activeNavLinks.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      } catch (error) {
+        console.error('Error loading includes:', error);
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', loadIncludes);
+  </script>
+</body>
+</html>
