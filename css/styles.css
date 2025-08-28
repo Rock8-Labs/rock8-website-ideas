@@ -1714,10 +1714,11 @@ textarea.form-control {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   gap: var(--space-lg);
+  padding: 0 var(--space-xl);
 }
 
 .solution-slide {
-  flex: 0 0 calc(33.333% - var(--space-lg));
+  flex: 0 0 calc(31.67% - var(--space-lg));
   position: relative;
   height: 330px;
   border-radius: var(--border-radius-lg);
