@@ -1816,10 +1816,9 @@ textarea.form-control {
 /* Carousel Navigation */
 .carousel-nav {
   position: absolute;
-  top: 50%;
+  bottom: -60px;
   left: 20px;
   right: 20px;
-  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   pointer-events: none;
