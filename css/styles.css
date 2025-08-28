@@ -1707,6 +1707,7 @@ textarea.form-control {
 .solutions-carousel-container {
   position: relative;
   margin: var(--space-xl) 0;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 
