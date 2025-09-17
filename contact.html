@@ -65,7 +65,7 @@
             <p class="progress-text" style="font-size: var(--fs-small); color: var(--text-tertiary); margin-top: var(--space-xs);">Complete your details</p>
           </div>
           
-          <form id="contact-form" method="POST" action="contact_handler.php" novalidate>
+          <form id="contact-form" method="POST" action="https://submit-form.com/TS6dsAjyy" novalidate>
             <!-- Name and Email Row -->
             <div class="form-row">
               <div class="form-group">
@@ -206,12 +206,15 @@
               <label for="subject" class="form-label">What can we help you with? *</label>
               <select class="form-control" id="subject" name="subject" required aria-describedby="subject-error">
                 <option value="">Select a topic</option>
+                <option value="subscription-management">Subscription Management</option>
+                <option value="transaction-branding">Transaction Branding</option>
                 <option value="ai-strategy">AI Strategy Consultation</option>
                 <option value="system-development">AI System Development</option>
                 <option value="operations-platform">Autonomous Operations</option>
                 <option value="innovation-labs">Innovation Labs</option>
                 <option value="website-reimagining">Website Re-Imagining</option>
                 <option value="realtime-streaming">Real-Time Data And Event Streaming</option>
+                <option value="intelligence-everywhere">Intelligence Everywhere</option>
                 <option value="general-inquiry">General Inquiry</option>
               </select>
               <div class="error-message" id="subject-error" role="alert"></div>
@@ -671,102 +674,35 @@
       
       // Form Submission
       form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Validate all fields
+        // Validate all fields before allowing submission
         let isFormValid = true;
         formFields.forEach(field => {
           if (!validateField(field)) {
             isFormValid = false;
           }
         });
-        
+
         if (!isFormValid) {
+          e.preventDefault();
           return;
         }
-        
+
         // Show loading state
         const btnText = submitBtn.querySelector('.btn-text');
         const btnLoading = submitBtn.querySelector('.btn-loading');
-        
+
         btnText.style.display = 'none';
         btnLoading.style.display = 'inline-flex';
         submitBtn.disabled = true;
-        
-        // Prepare form data for email
-        const formData = new FormData(form);
-        const companyName = formData.get('company') || 'Unknown Company';
-        
-        // Handle timezone data
-        const timezone = formData.get('timezone');
-        const detailedTimezone = formData.get('detailed-timezone');
-        const finalTimezone = timezone === 'other' ? detailedTimezone : timezone;
-        
-        // Create email body
-        const emailBody = `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Company:</strong> ${formData.get('company')}</p>
-          <p><strong>Name:</strong> ${formData.get('name')}</p>
-          <p><strong>Email:</strong> ${formData.get('email')}</p>
-          <p><strong>Role:</strong> ${formData.get('role')}</p>
-          <p><strong>Company Size:</strong> ${formData.get('company-size')}</p>
-          <p><strong>Budget:</strong> ${formData.get('budget')}</p>
-          <p><strong>Phone:</strong> ${formData.get('phone')}</p>
-          <p><strong>Timezone:</strong> ${finalTimezone}</p>
-          <p><strong>Subject:</strong> ${formData.get('subject')}</p>
-          <p><strong>Timeline:</strong> ${formData.get('timeline')}</p>
-          <p><strong>Message:</strong></p>
-          <p>${formData.get('message')}</p>
-        `;
-        
-        // Send form data to PHP handler
-        fetch('contact_handler.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.success) {
-            // Success - show banner and reset form
-            form.reset();
-            updateProgress();
-            
-            // Reset button
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
-            submitBtn.disabled = true;
-            
-            // Show success banner
-            const successBanner = document.getElementById('success-banner');
-            successBanner.style.display = 'block';
-            
-            // Hide success banner after 10 seconds
-            setTimeout(function() {
-              successBanner.style.display = 'none';
-            }, 10000);
-            
-            // Track form submission
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'form_submit', {
-                event_category: 'Contact',
-                event_label: 'Strategy Session Request'
-              });
-            }
-          } else {
-            throw new Error(data.error || 'Unknown error occurred');
-          }
-        })
-        .catch(error => {
-          console.error('Form submission error:', error);
-          
-          // Reset button on error
-          btnText.style.display = 'inline';
-          btnLoading.style.display = 'none';
-          submitBtn.disabled = false;
-          
-          // Show error message
-          alert(error.message || 'Sorry, there was an error sending your message. Please try again or contact us directly at sales@rock8.io');
-        });
+
+        // Form will submit naturally to submit-form.com
+        // Track form submission
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            event_category: 'Contact',
+            event_label: 'Strategy Session Request'
+          });
+        }
       });
       
       // Initialize progress
