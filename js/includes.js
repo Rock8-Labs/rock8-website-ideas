@@ -7,11 +7,11 @@ const HEADER_HTML = `
   <div class="container">
     <div class="navbar-container">
       <a href="index.html" class="navbar-logo">
-        <img src="images/logo/logor8_white.png" alt="Rock8.io">
+        <img src="images/logo/logor8_white.png" alt="Rock8.io" width="166" height="47">
       </a>
-      
+
       <nav class="navbar-menu">
-        <button class="menu-close">
+        <button class="menu-close" aria-label="Close menu">
           <i class="fas fa-times"></i>
         </button>
         <a href="index.html" class="navbar-link">Home</a>
@@ -22,7 +22,7 @@ const HEADER_HTML = `
         <a href="contact.html" class="btn btn-primary navbar-cta">Get in Touch</a>
       </nav>
       
-      <button class="navbar-toggle">
+      <button class="navbar-toggle" aria-label="Open menu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
@@ -39,13 +39,13 @@ const FOOTER_HTML = `
       <div style="display: grid; grid-template-columns: 1fr auto 1fr; justify-items: center; gap: var(--space-lg);">
         <div style="justify-self: start;">
           <div class="footer-logo">
-            <img src="images/logo/logor8_white.png" alt="Rock8.io">
+            <img src="images/logo/logor8_white.png" alt="Rock8.io" width="166" height="47">
           </div>
           <p class="footer-description">
             Architecting Autonomous Intelligence. Rock8.io pioneers AI systems that think, evolve, and deliver exponential business value autonomously.
           </p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/company/14853263/" target="_blank" class="social-link">
+            <a href="https://www.linkedin.com/company/14853263/" target="_blank" rel="noopener" class="social-link" aria-label="Rock8.io on LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
           </div>
@@ -101,7 +101,7 @@ const FOOTER_HTML = `
     
     <div class="footer-bottom">
       <div class="copyright">
-        &copy; 2025 Rock8.io. All Rights Reserved.
+        &copy; 2026 Rock8.io. All Rights Reserved. | <a href="privacy.html" class="footer-link" style="display:inline;">Privacy Policy</a>
       </div>
     </div>
   </div>

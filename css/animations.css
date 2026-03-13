@@ -61,10 +61,10 @@
   animation: gradientBG 15s ease infinite;
 }
 
-/* Typing cursor effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Typing reveal effect — uses clip-path to avoid layout shift */
+@keyframes typing-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
 }
 
 @keyframes blink {
@@ -72,11 +72,8 @@
 }
 
 .typing-effect {
-  overflow: visible;
-  white-space: normal;
-  width: auto;
-  animation: 
-    typing 3.5s steps(40, end) forwards;
+  display: inline-block;
+  animation: typing-reveal 3.5s steps(40, end) forwards;
 }
 
 /* Reveal animation for sections */

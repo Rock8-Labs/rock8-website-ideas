@@ -18,7 +18,7 @@
   /* Text Colors */
   --text-primary: #FFFFFF;   /* Primary text */
   --text-secondary: #C8C7D8; /* Secondary/body text */
-  --text-tertiary: #8B89A5;  /* Less important text */
+  --text-tertiary: #A8A6BF;  /* Less important text — meets WCAG 2AA on dark backgrounds */
   
   /* Semantic Colors */
   --success: #00E1A0;

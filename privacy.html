@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Rock8.io</title>
+  <meta name="description" content="Rock8.io privacy policy — how we collect, use, and protect your information.">
+  <link rel="canonical" href="https://rock8.io/privacy.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/rock8icon.png">
+  <link rel="apple-touch-icon" href="images/rock8icon.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="hero" style="min-height: auto; padding: var(--space-3xl) 0 var(--space-xl);">
+    <div class="container">
+      <h1 class="hero-title display">Privacy <span class="text-gradient">Policy</span></h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <div style="color: var(--text-secondary); line-height: 1.8;">
+        <p><strong>Last updated:</strong> March 11, 2026</p>
+
+        <h2 style="margin-top: var(--space-xl);">Information We Collect</h2>
+        <p>When you submit our contact form, we collect the information you provide: your name, email address, company name, and project details. We do not use cookies for tracking or advertising.</p>
+
+        <h2 style="margin-top: var(--space-xl);">How We Use Your Information</h2>
+        <p>We use your contact information solely to respond to your inquiry and discuss potential business engagements. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+        <h2 style="margin-top: var(--space-xl);">Third-Party Services</h2>
+        <p>Our contact form submissions are processed through Submit-Form (submit-form.com). We use Google Fonts for typography. These services may collect basic technical data (IP address, browser type) as part of their normal operation.</p>
+
+        <h2 style="margin-top: var(--space-xl);">Data Retention</h2>
+        <p>We retain contact form submissions for as long as necessary to fulfill the purpose for which they were collected. You may request deletion of your data at any time by emailing <a href="mailto:info@rock8.io" style="color: var(--primary);">info@rock8.io</a>.</p>
+
+        <h2 style="margin-top: var(--space-xl);">Your Rights</h2>
+        <p>You have the right to access, correct, or delete your personal information. To exercise these rights, contact us at <a href="mailto:info@rock8.io" style="color: var(--primary);">info@rock8.io</a>.</p>
+
+        <h2 style="margin-top: var(--space-xl);">Contact</h2>
+        <p>For questions about this privacy policy, email <a href="mailto:info@rock8.io" style="color: var(--primary);">info@rock8.io</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("includes/header.html");
+        const footerResponse = await fetch("includes/footer.html");
+        if (headerResponse.ok) document.getElementById("header").innerHTML = await headerResponse.text();
+        if (footerResponse.ok) document.getElementById("footer").innerHTML = await footerResponse.text();
+      } catch (error) {
+        console.error('Error loading includes:', error);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadIncludes);
+  </script>
+</body>
+</html>

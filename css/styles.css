@@ -694,6 +694,7 @@ ul li {
   max-width: 100%;
   width: 100%;
   height: auto;
+  aspect-ratio: 828 / 621;
   display: block;
   object-fit: cover;
   transition: transform var(--transition-normal);
@@ -1709,6 +1710,7 @@ textarea.form-control {
   margin: var(--space-xl) 0;
   padding-bottom: 20px;
   overflow: hidden;
+  min-height: 380px; /* Reserve space to prevent CLS during carousel load */
 }
 
 .solutions-carousel {

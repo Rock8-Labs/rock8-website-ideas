@@ -5,16 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock8.io - Building Future-Ready Businesses, Faster</title>
   <meta name="description" content="Rock8.io is your AI-native partner for business-led digital transformation. We accelerate innovation with measurable business impact.">
-  
-  
+  <link rel="canonical" href="https://rock8.io/">
+  <meta property="og:title" content="Rock8.io — AI-Powered Business Transformation">
+  <meta property="og:description" content="We architect intelligent AI solutions that think, adapt, and deliver results autonomously. Transform your operations with measurable ROI.">
+  <meta property="og:image" content="https://rock8.io/images/Android-conductor-1.jpg">
+  <meta property="og:url" content="https://rock8.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/rock8icon.png">
+  <link rel="apple-touch-icon" href="images/rock8icon.png">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
-  
-  <!-- Preload fonts -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
-  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" as="style">
+
+  <!-- Fonts (loaded as stylesheets, not preloaded) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Rock8.io",
+    "description": "AI-native partner for business-led digital transformation. We architect intelligent solutions that think, adapt, and deliver results autonomously.",
+    "url": "https://rock8.io",
+    "logo": "https://rock8.io/images/logo/logor8_white.png",
+    "email": "info@rock8.io",
+    "sameAs": [
+      "https://www.linkedin.com/company/14853263/"
+    ],
+    "serviceType": ["AI Strategy", "AI System Development", "Business Automation", "Digital Transformation"],
+    "areaServed": "Worldwide"
+  }
+  </script>
 </head>
 <body>
   <!-- Page Loader -->
@@ -32,7 +61,7 @@
   <div class="cursor-circle"></div>
   
   <!-- Back to top button -->
-  <button id="back-to-top" class="back-to-top">
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
   
@@ -75,7 +104,7 @@
         </div>
         
         <div class="hero-image reveal reveal-delay-3">
-          <img src="images/Android-conductor-1.jpg" alt="AI Conductor Orchestrating Business Operations">
+          <img src="images/Android-conductor-1.jpg" alt="AI Conductor Orchestrating Business Operations" width="828" height="621">
         </div>
       </div>
     </div>
@@ -162,10 +191,10 @@
         
         <!-- Carousel Navigation -->
         <div class="carousel-nav">
-          <button class="carousel-btn carousel-prev" id="carousel-prev">
+          <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous solution">
             <i class="fas fa-chevron-left"></i>
           </button>
-          <button class="carousel-btn carousel-next" id="carousel-next">
+          <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next solution">
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>

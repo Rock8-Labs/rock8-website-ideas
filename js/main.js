@@ -409,12 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Typing effect for hero titles
-  const typingElement = document.querySelector('.typing-effect');
-  if (typingElement) {
-    typingElement.style.width = '0';
-    typingElement.style.animation = 'typing 3.5s steps(40, end) forwards';
-  }
+  // Typing effect handled by CSS clip-path animation (no JS width manipulation to avoid CLS)
   
   // Mobile device detection
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);

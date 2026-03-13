@@ -199,7 +199,7 @@ function initializeSolutionsCarousel() {
     const maxSlidePositions = Math.max(1, SERVICES_DATA.length - currentSlidesPerView + 1);
     
     const dotsHTML = Array.from({length: maxSlidePositions}, (_, index) => 
-      `<button class="carousel-dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></button>`
+      `<button class="carousel-dot ${index === 0 ? 'active' : ''}" data-slide="${index}" aria-label="Go to slide ${index + 1}"></button>`
     ).join('');
     dotsContainer.innerHTML = dotsHTML;
   }
@@ -277,7 +277,7 @@ function initializeSolutionsCarousel() {
       const maxSlidePositions = Math.max(1, SERVICES_DATA.length - currentSlidesPerView + 1);
       
       const dotsHTML = Array.from({length: maxSlidePositions}, (_, index) => 
-        `<button class="carousel-dot ${index === currentSlide ? 'active' : ''}" data-slide="${index}"></button>`
+        `<button class="carousel-dot ${index === currentSlide ? 'active' : ''}" data-slide="${index}" aria-label="Go to slide ${index + 1}"></button>`
       ).join('');
       dotsContainer.innerHTML = dotsHTML;
     }
