@@ -18,12 +18,18 @@
   <link rel="icon" type="image/png" href="images/rock8icon.png">
   <link rel="apple-touch-icon" href="images/rock8icon.png">
 
+  <!-- Preconnect to font CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
 
-  <!-- Fonts (loaded as stylesheets, not preloaded) -->
+  <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
 
@@ -65,7 +71,7 @@
     <i class="fas fa-arrow-up"></i>
   </button>
   
-  <div id="header"></div>
+  <div id="header" style="min-height:var(--header-height);"></div>
   
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -186,7 +192,6 @@
       <div class="solutions-carousel-container reveal">
         <div class="solutions-carousel" id="solutions-carousel">
           <!-- Carousel slides will be dynamically loaded here -->
-          <div class="carousel-loading">Loading solutions...</div>
         </div>
         
         <!-- Carousel Navigation -->
