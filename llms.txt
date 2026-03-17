@@ -1,0 +1,23 @@
+# Rock8.io
+
+> AI-native partner for business-led digital transformation. We architect intelligent solutions that think, adapt, and deliver results autonomously.
+
+Rock8.io is a technology consultancy specializing in AI-powered business transformation. We help enterprises accelerate innovation with measurable business impact through autonomous intelligent systems.
+
+## Services
+
+- AI Strategy & Architecture: Strategic AI roadmaps and autonomous intelligence layers
+- AI Systems Development: Custom AI solutions engineered for production at scale
+- Self-Healing Legacy Systems: Autonomous operations that monitor, diagnose, and repair themselves
+- AI Innovation Labs: Rapid prototyping and validation of AI-driven business ideas
+- Website Re-Imagining: AI-powered website transformation for modern digital experiences
+- Real-time Data Streaming: Live data pipelines for instant business intelligence
+- Subscription Management: Intelligent billing and subscription lifecycle automation
+- Transaction Branding: Branded payment experiences and transaction identity systems
+- Intelligence Everywhere: Embedded AI across every business touchpoint
+
+## Contact
+
+- Website: https://rock8.io
+- Email: info@rock8.io
+- LinkedIn: https://www.linkedin.com/company/14853263/

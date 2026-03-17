@@ -11,7 +11,7 @@ const SERVICES_DATA = [
     description: 'Unify payment workflows, simplify billing complexity, and empower customers with seamless subscription control—all through a scalable, brandable platform built for modern businesses.',
     category: 'new',
     url: 'services/subscription-management.html',
-    heroImage: 'images/reinventing_sub_mgmt_(midjourney)_1.png'
+    heroImage: 'images/reinventing_sub_mgmt_(midjourney)_1.webp'
   },
   {
     id: 'transaction-branding',
@@ -20,7 +20,7 @@ const SERVICES_DATA = [
     description: 'Activate expressive wallet experiences with personalized visuals, haptics, and audio that turn everyday payments into moments of brand and identity.',
     category: 'new',
     url: 'services/transaction-branding.html',
-    heroImage: 'images/rock8_branded_card_1.png'
+    heroImage: 'images/rock8_branded_card_1.webp'
   },
   {
     id: 'ai-strategy',
@@ -29,7 +29,7 @@ const SERVICES_DATA = [
     description: 'Design intelligent ecosystems that autonomously execute your business strategy with superhuman efficiency.',
     category: 'core',
     url: 'services/ai-strategy-architecture.html',
-    heroImage: 'images/ai-strategy_1_816x816.png'
+    heroImage: 'images/ai-strategy_1_816x816.webp'
   },
   {
     id: 'ai-systems',
@@ -38,7 +38,7 @@ const SERVICES_DATA = [
     description: 'Build coordinated AI systems that collaborate, compete, and evolve to solve complex business challenges autonomously.',
     category: 'core',
     url: 'services/ai-systems-development.html',
-    heroImage: 'images/AI-systems-dev_1.png'
+    heroImage: 'images/AI-systems-dev_1.webp'
   },
   {
     id: 'autonomous-ops',
@@ -47,7 +47,7 @@ const SERVICES_DATA = [
     description: 'Transform legacy systems into self-healing, self-scaling platforms powered by intelligent agents that never sleep.',
     category: 'core',
     url: 'services/self-healing-legacy-systems.html',
-    heroImage: 'images/visualize_legacy.png'
+    heroImage: 'images/visualize_legacy.webp'
   },
   {
     id: 'innovation-labs',
@@ -56,7 +56,7 @@ const SERVICES_DATA = [
     description: 'Explore the bleeding edge of autonomous intelligence. We prototype tomorrow\'s business models using today\'s AI capabilities.',
     category: 'core',
     url: 'services/ai-innovation-labs.html',
-    heroImage: 'images/hardware_meets_synops_1.png'
+    heroImage: 'images/hardware_meets_synops_1.webp'
   },
   {
     id: 'website-reimagining',
@@ -65,7 +65,7 @@ const SERVICES_DATA = [
     description: 'Transform your digital presence with AI-driven design. We create websites that adapt, evolve, and optimize themselves in real-time.',
     category: 'core',
     url: 'services/website-transformation.html',
-    heroImage: 'images/websites_reimagined_1.png'
+    heroImage: 'images/websites_reimagined_1.webp'
   },
   {
     id: 'data-streaming',
@@ -74,7 +74,7 @@ const SERVICES_DATA = [
     description: 'Process millions of events per second with zero-latency intelligence that reacts faster than human thought. Build streaming architectures that turn data chaos into competitive clarity.',
     category: 'core',
     url: 'services/data-streaming.html',
-    heroImage: 'images/data_streaming_1.png'
+    heroImage: 'images/data_streaming_1.webp'
   },
   {
     id: 'intelligence-everywhere',
@@ -83,7 +83,7 @@ const SERVICES_DATA = [
     description: 'Connect and orchestrate smart infrastructure across factories, buildings, cities, and logistics networks. Deploy resilient IoT systems that automate, monitor, and optimize operations in real time.',
     category: 'new',
     url: 'services/intelligence-everywhere.html',
-    heroImage: 'images/intelligence_everywhere_7.png'
+    heroImage: 'images/intelligence_everywhere_7.webp'
   }
 ];
 

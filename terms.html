@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Rock8.io</title>
+  <meta name="description" content="Rock8.io terms of service — the terms and conditions governing use of our website and services.">
+  <link rel="canonical" href="https://rock8.io/terms.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/rock8icon.png">
+  <link rel="apple-touch-icon" href="images/rock8icon.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="hero" style="min-height: auto; padding: var(--space-3xl) 0 var(--space-xl);">
+    <div class="container">
+      <h1 class="hero-title display">Terms of <span class="text-gradient">Service</span></h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <div style="color: var(--text-secondary); line-height: 1.8;">
+        <p><strong>Last updated:</strong> March 17, 2026</p>
+
+        <h2 style="margin-top: var(--space-xl);">1. Acceptance of Terms</h2>
+        <p>By accessing and using the Rock8.io website ("Site"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site.</p>
+
+        <h2 style="margin-top: var(--space-xl);">2. Use of the Site</h2>
+        <p>You may use this Site for lawful purposes only. You agree not to use the Site in any way that could damage, disable, or impair the Site or interfere with any other party's use of the Site. You may not attempt to gain unauthorized access to any part of the Site or any systems or networks connected to the Site.</p>
+
+        <h2 style="margin-top: var(--space-xl);">3. Intellectual Property</h2>
+        <p>All content on this Site, including text, graphics, logos, images, and software, is the property of Rock8.io or its content suppliers and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content on this Site without our prior written consent.</p>
+
+        <h2 style="margin-top: var(--space-xl);">4. Services</h2>
+        <p>Rock8.io provides AI-powered business transformation and technology consulting services. Any engagement for services will be governed by a separate written agreement between you and Rock8.io. Information on this Site about our services is for general informational purposes and does not constitute an offer or contract.</p>
+
+        <h2 style="margin-top: var(--space-xl);">5. Disclaimer of Warranties</h2>
+        <p>This Site is provided "as is" and "as available" without warranties of any kind, either express or implied. Rock8.io does not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+
+        <h2 style="margin-top: var(--space-xl);">6. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, Rock8.io shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Site.</p>
+
+        <h2 style="margin-top: var(--space-xl);">7. Privacy</h2>
+        <p>Your use of this Site is also governed by our <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+        <h2 style="margin-top: var(--space-xl);">8. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of South Africa. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.</p>
+
+        <h2 style="margin-top: var(--space-xl);">9. Changes to These Terms</h2>
+        <p>We reserve the right to update these Terms at any time. Changes will be effective immediately upon posting to this page. Your continued use of the Site after changes are posted constitutes your acceptance of the revised Terms.</p>
+
+        <h2 style="margin-top: var(--space-xl);">10. Contact</h2>
+        <p>For questions about these Terms, email <a href="mailto:info@rock8.io" style="color: var(--primary);">info@rock8.io</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("includes/header.html");
+        const footerResponse = await fetch("includes/footer.html");
+        if (headerResponse.ok) document.getElementById("header").innerHTML = await headerResponse.text();
+        if (footerResponse.ok) document.getElementById("footer").innerHTML = await footerResponse.text();
+      } catch (error) {
+        console.error('Error loading includes:', error);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadIncludes);
+  </script>
+</body>
+</html>

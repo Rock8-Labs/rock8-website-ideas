@@ -7,7 +7,7 @@ const HEADER_HTML = `
   <div class="container">
     <div class="navbar-container">
       <a href="index.html" class="navbar-logo">
-        <img src="images/logo/logor8_white.png" alt="Rock8.io" width="166" height="47">
+        <img src="images/logo/logor8_white.webp" alt="Rock8.io" width="166" height="47">
       </a>
 
       <nav class="navbar-menu">
@@ -39,7 +39,7 @@ const FOOTER_HTML = `
       <div style="display: grid; grid-template-columns: 1fr auto 1fr; justify-items: center; gap: var(--space-lg);">
         <div style="justify-self: start;">
           <div class="footer-logo">
-            <img src="images/logo/logor8_white.png" alt="Rock8.io" width="166" height="47">
+            <img src="images/logo/logor8_white.webp" alt="Rock8.io" width="166" height="47">
           </div>
           <p class="footer-description">
             Architecting Autonomous Intelligence. Rock8.io pioneers AI systems that think, evolve, and deliver exponential business value autonomously.
